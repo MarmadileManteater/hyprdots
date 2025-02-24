@@ -1,6 +1,11 @@
 
 These are my dotfiles for hyprland.
 
+**packages you will want to install**
+
+- xfce-polkit
+- starship
+
 **external assets**
 
 You will want to download `0xProto Nerd Font` from [nerdfonts.com](https://www.nerdfonts.com/font-downloads) for starship to display properly.
@@ -8,3 +13,5 @@ You will want to download `0xProto Nerd Font` from [nerdfonts.com](https://www.n
 **links**
 
 - [starship](https://starship.rs/)
+- [hyprpolkitagent](https://wiki.hyprland.org/Hypr-Ecosystem/hyprpolkitagent/)
+- [adw-gtk3](https://github.com/lassekongo83/adw-gtk3)
