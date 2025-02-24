@@ -7,6 +7,8 @@ These are my dotfiles for hyprland.
 - starship
 - hyprshot
 - swaync
+- waybar-git
+- pavucontrol
 
 **external assets**
 
