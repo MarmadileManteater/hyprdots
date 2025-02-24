@@ -13,12 +13,12 @@ $git_status\
 $c\
 $rust\
 $golang\
-$nodejs\
 $php\
 $java\
 $kotlin\
 $haskell\
 $python\
+$nodejs\
 [ ](fg:blue)\
 $line_break$character"""
 
@@ -91,11 +91,12 @@ truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
-"Documents" = "󰈙 "
+"Documents" = "󰈙"
 "Downloads" = " "
 "Music" = "󰝚 "
 "Pictures" = " "
 "Developer" = "󰲋 "
+"Workspace" = "󰲋 "
 
 [git_branch]
 symbol = ""
@@ -132,14 +133,14 @@ style = "bg:blue"
 format = '[[ $symbol( $version) ](fg:base bg:blue)]($style)'
 
 [java]
-symbol = " "
+symbol = ""
 style = "bg:blue"
 format = '[[ $symbol( $version) ](fg:base bg:blue)]($style)'
 
 [kotlin]
 symbol = ""
 style = "bg:blue"
-format = '[[ $symbol( $version) ](fg:base bg:blue)]($style)'
+format = '[[$symbol( $version) ](fg:base bg:blue)]($style)'
 
 [haskell]
 symbol = ""
@@ -149,7 +150,7 @@ format = '[[ $symbol( $version) ](fg:base bg:blue)]($style)'
 [python]
 symbol = ""
 style = "bg:blue"
-format = '[[ $symbol( $version) ](fg:base bg:blue)]($style)'
+format = '[[ $symbol( $version)](fg:base bg:blue)]($style)'
 
 [docker_context]
 symbol = ""
