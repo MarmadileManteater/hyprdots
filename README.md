@@ -5,6 +5,7 @@ These are my dotfiles for hyprland.
 
 - xfce-polkit
 - starship
+- hyprshot
 
 **external assets**
 
