@@ -9,6 +9,7 @@ These are my dotfiles for hyprland.
 - swaync
 - waybar-git
 - pavucontrol
+- adw-gtk3
 
 **external assets**
 
