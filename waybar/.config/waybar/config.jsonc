@@ -34,6 +34,7 @@
         "position": "bottom",
         "height": 34,
         "modules-left": [
+            "image",
             "custom/playerctl",
             "custom/cava"
         ],

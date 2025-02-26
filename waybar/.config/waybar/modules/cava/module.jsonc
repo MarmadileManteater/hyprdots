@@ -2,5 +2,15 @@
     "custom/cava": {
         "exec": "$HOME/.config/waybar/modules/cava/script.sh",
         "format": "{}"
+    },
+    "image": {
+        "exec":"~/.config/waybar/modules/cava/album_art.sh",
+        "size": 64,
+        "interval": 2,
+        "on-click": "playerctl play",
+        "on-click-middle": "playerctl next",
+        "on-click-right": "playerctl previous",
+        "on-scroll-up": "amixer sset Master 5%+",
+        "on-scroll-down": "amixer sset Master 5%-"
     }
 }
