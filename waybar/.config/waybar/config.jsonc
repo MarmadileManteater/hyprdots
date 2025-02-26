@@ -18,7 +18,7 @@
         ],
         "modules-right": [
             "cpu#custom",
-            "temperature#custom",
+            "custom/cpu-temp",
             "custom/nvidia"
         ]
     },
@@ -31,7 +31,7 @@
         ],
         "layer": "bottom",
         "position": "bottom",
-        "height": 45,
+        "height": 34,
         "modules-left": [
             "custom/cava"
         ],

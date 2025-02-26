@@ -11,6 +11,7 @@ These are my dotfiles for hyprland.
 - pavucontrol
 - adw-gtk3
 - cava
+- lm-sensors
 
 **external assets**
 
