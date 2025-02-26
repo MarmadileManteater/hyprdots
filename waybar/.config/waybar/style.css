@@ -20,7 +20,7 @@
   opacity: 1;
 }
 
-#pulseaudio, #network, #memory, #cpu, #temperature, #clock, #window, #custom-nvidia, #tray {
+#pulseaudio, #network, #memory, #cpu, #temperature, #clock, #window, #custom-nvidia, #tray, #custom-cpu-temp {
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -52,4 +52,8 @@
 #image {
   padding-left: 10px;
   padding-bottom: 5px;
+}
+
+#custom-nvidia, #memory {
+  margin-right: 20px;
 }
