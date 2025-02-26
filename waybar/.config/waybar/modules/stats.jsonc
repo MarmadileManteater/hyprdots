@@ -38,7 +38,7 @@
     
     // #region custom
     "custom/cpu-temp": {
-        "exec": "sensors | grep 'temp1:' -m 1 | sed 's/.*+//g'",
+        "exec": "sensors | grep 'temp3:' -m 1 | sed 's/.*+//g'",
         "format": "   {}",
         "interval": 2
     },
