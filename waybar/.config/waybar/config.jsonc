@@ -31,7 +31,7 @@
         ],
         "layer": "bottom",
         "position": "bottom",
-        "height": 34,
+        "height": 45,
         "modules-left": [
             "image",
             "custom/playerctl",

@@ -5,7 +5,7 @@
     },
     "custom/playerctl": {
         "exec": "playerctl metadata --format '{{artist}} - {{title}}'  | awk -v len=50 '{ if (length($0) > len) print substr($0, 1, len-3) \"...\"; else print; }'",
-        "interval": 2,
+        "interval": 1,
         "on-click": "playerctl play",
         "on-click-middle": "playerctl next",
         "on-click-right": "playerctl previous",
@@ -15,7 +15,7 @@
     "image": {
         "exec":"$HOME/.config/waybar/modules/media-notif/album_art.sh",
         "size": 64,
-        "interval": 2,
+        "interval": 1,
         "on-click": "playerctl play",
         "on-click-middle": "playerctl next",
         "on-click-right": "playerctl previous",
