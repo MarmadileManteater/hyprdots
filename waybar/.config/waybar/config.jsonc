@@ -27,12 +27,14 @@
         "include": [
             "$HOME/.config/waybar/modules/stats.jsonc",
             "$HOME/.config/waybar/modules/taskbar.jsonc",
-            "$HOME/.config/waybar/modules/cava/module.jsonc"
+            "$HOME/.config/waybar/modules/cava/module.jsonc",
+            "$HOME/.config/waybar/modules/playerctl.jsonc"
         ],
         "layer": "bottom",
         "position": "bottom",
         "height": 34,
         "modules-left": [
+            "custom/playerctl",
             "custom/cava"
         ],
         "modules-right": [

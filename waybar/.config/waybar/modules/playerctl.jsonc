@@ -1,0 +1,6 @@
+{
+    "custom/playerctl": {
+        "exec": "playerctl metadata --format '{{artist}} - {{title}}'",
+        "interval": 2
+    }
+}
