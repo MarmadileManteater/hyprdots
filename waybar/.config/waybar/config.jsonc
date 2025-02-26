@@ -27,8 +27,7 @@
         "include": [
             "$HOME/.config/waybar/modules/stats.jsonc",
             "$HOME/.config/waybar/modules/taskbar.jsonc",
-            "$HOME/.config/waybar/modules/cava/module.jsonc",
-            "$HOME/.config/waybar/modules/playerctl.jsonc"
+            "$HOME/.config/waybar/modules/media-notif/module.jsonc"
         ],
         "layer": "bottom",
         "position": "bottom",
