@@ -1,0 +1,17 @@
+{
+    "clock#time": {
+        "interval": 1,
+        "timezones": ["EST", "CET"],
+        "actions":{
+            "on-scroll-up": "tz_up",
+            "on-scroll-down": "tz_down"
+        },
+        "format": "󰥔  {:%r %Z}",
+        "tooltip": false
+    },
+
+    "clock#date": {
+        "interval": 10,
+        "format": "  {:%e %b %Y}"
+    }
+}
