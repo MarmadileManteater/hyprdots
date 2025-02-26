@@ -52,6 +52,7 @@
 #image {
   padding-left: 10px;
   padding-bottom: 5px;
+  margin-right: -5px;
 }
 
 #custom-nvidia, #memory {
