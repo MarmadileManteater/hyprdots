@@ -24,7 +24,7 @@
 
 }
 
-#pulseaudio, #network, #memory, #cpu, #temperature, #clock, #window, #custom-nvidia {
+#pulseaudio, #network, #memory, #cpu, #temperature, #clock, #window, #custom-nvidia, #tray {
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -35,4 +35,12 @@
 
 #pulseaudio.muted {
   color: rgb(250, 126, 126);
+}
+
+#custom-cava {
+  padding-top: 4px;
+	padding-bottom: 4px;
+	padding-right: 6px;
+  padding-left: 20px;
+  font-family: monospace;
 }

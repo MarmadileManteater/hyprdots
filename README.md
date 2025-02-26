@@ -10,6 +10,7 @@ These are my dotfiles for hyprland.
 - waybar-git
 - pavucontrol
 - adw-gtk3
+- cava
 
 **external assets**
 
