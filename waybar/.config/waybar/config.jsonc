@@ -8,7 +8,7 @@
         ],
         "layer": "bottom",
         "position": "top",
-        "height": 45,
+        "height": 40,
         "modules-left": [
             "wlr/taskbar#custom",
             "hyprland/window"
