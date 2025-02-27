@@ -9,7 +9,6 @@
 #taskbar {
   padding-left: 10px;
   padding-right: 10px;
-  margin-top: 5px;
 }
 
 #taskbar button {
@@ -37,12 +36,8 @@
 
 #window {
   margin-left: 0px;
-  margin-top: 6px;
 }
 
-#clock, #idle_inhibitor, #cpu, #custom-cpu-temp, #custom-nvidia, #custom-power {
-  margin-top: 6px;
-}
 
 #pulseaudio.muted {
   color: rgb(250, 126, 126);
