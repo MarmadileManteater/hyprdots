@@ -47,7 +47,15 @@
         "on-click": "amixer set Master toggle",
         "on-click-middle": "pavucontrol"
     },
-    
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": "󰾫"
+        }
+    },
+
     "tray#custom": {
         "icon-size": 21,
         "spacing": 20
