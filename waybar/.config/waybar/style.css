@@ -71,7 +71,7 @@
 #image {
   padding-left: 10px;
   padding-bottom: 5px;
-  margin-right: -5px;
+  margin-left: 5px;
 }
 
 #custom-nvidia, #memory {
@@ -81,3 +81,4 @@
 #custom-cava {
   margin-left: -10px;
 }
+
