@@ -13,6 +13,8 @@ These are my dotfiles for hyprland.
 - cava
 - lm-sensors
 - wlogout
+- hypridle
+- hyprlock
 
 **external assets**
 
