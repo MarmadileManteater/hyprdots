@@ -6,13 +6,13 @@
 }
 {
     "label" : "reboot",
-    "action" : "systemctl reboot",
+    "action" : "reboot now",
     "text" : "Reboot",
     "keybind" : "r"
 }
 {
     "label" : "shutdown",
-    "action" : "systemctl shutdown",
+    "action" : "shutdown now",
     "text" : "Shutdown",
     "keybind" : "s"
 }
