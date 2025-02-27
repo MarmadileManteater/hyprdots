@@ -25,6 +25,10 @@
   margin-right: 10px;
 }
 
+#custom-cpu-temp {
+  margin-right: 5px;
+}
+
 #idle_inhibitor {
   margin-left: 10px;
   margin-right: 15px;
