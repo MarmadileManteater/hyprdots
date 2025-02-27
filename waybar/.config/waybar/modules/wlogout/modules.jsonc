@@ -1,0 +1,6 @@
+{   
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout -l $HOME/.config/waybar/modules/wlogout/power-menu -C $HOME/.config/waybar/modules/wlogout/power-menu.css"
+    }
+}

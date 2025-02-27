@@ -3,7 +3,8 @@
         "include": [
             "$HOME/.config/waybar/modules/stats.jsonc",
             "$HOME/.config/waybar/modules/clock.jsonc",
-            "$HOME/.config/waybar/modules/taskbar.jsonc"
+            "$HOME/.config/waybar/modules/taskbar.jsonc",
+            "$HOME/.config/waybar/modules/wlogout/modules.jsonc"
         ],
         "layer": "bottom",
         "position": "top",
@@ -19,7 +20,8 @@
         "modules-right": [
             "cpu#custom",
             "custom/cpu-temp",
-            "custom/nvidia"
+            "custom/nvidia",
+            "custom/power"
         ]
     },
 

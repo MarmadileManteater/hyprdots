@@ -12,6 +12,7 @@ These are my dotfiles for hyprland.
 - adw-gtk3
 - cava
 - lm-sensors
+- wlogout
 
 **external assets**
 
