@@ -1,7 +1,7 @@
 {
     "clock#time": {
         "interval": 1,
-        "timezones": ["EST", "CET"],
+        "timezones": ["America/Cuiaba", "CET"],
         "actions":{
             "on-scroll-up": "tz_up",
             "on-scroll-down": "tz_down"
@@ -12,6 +12,7 @@
 
     "clock#date": {
         "interval": 10,
+        "timezones": ["America/Cuiaba"],
         "format": "  {:%e %b %Y}",
         "tooltip": false
     }
