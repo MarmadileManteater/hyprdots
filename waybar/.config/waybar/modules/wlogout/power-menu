@@ -1,18 +1,18 @@
 {
     "label" : "logout",
-    "action" : "hyprctl dispatch exit",
+    "action" : "$HOME/.config/hypr/scripts/kill-tmux-sessions.sh ollama-web-ui --exclude && hyprctl dispatch exit",
     "text" : "Logout",
     "keybind" : "l"
 }
 {
     "label" : "reboot",
-    "action" : "reboot now",
+    "action" : "reboot",
     "text" : "Reboot",
     "keybind" : "r"
 }
 {
     "label" : "shutdown",
-    "action" : "shutdown now",
+    "action" : "shutdown",
     "text" : "Shutdown",
     "keybind" : "s"
 }
