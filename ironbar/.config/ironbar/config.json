@@ -1,4 +1,5 @@
 {
+    "name": "dock",
     "layer": "bottom",
     "anchor_to_edges": false,
     "position": "left",
