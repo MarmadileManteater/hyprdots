@@ -8,6 +8,7 @@ These are my dotfiles for hyprland.
 - hyprshot
 - swaync
 - waybar-git
+- ironbar-git
 - pavucontrol
 - adw-gtk3
 - cava

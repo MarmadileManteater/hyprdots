@@ -1,0 +1,36 @@
+
+* {
+    background-image: none;
+    background-color: transparent;
+}
+
+#bar {
+    margin-left: 5px;
+    margin-right: 2px;
+}
+
+.launcher .item {
+    opacity: 0.7;
+    padding: 6px;
+    margin: 5px 0px;
+}
+
+.launcher .item.open {
+    border: 2px solid rgba(100, 100, 100, 0.58);
+    background-color: rgba(75, 75, 75, 0.58);
+}
+
+.launcher .item.focused {
+    opacity: 1;
+    border: 2px solid rgba(150, 150, 150, 0.58);
+}
+
+.popup-launcher .popup-item {
+    background-color: rgba(50, 50, 50, 1);
+    border: 2px solid rgba(75, 75, 75, 1);
+    margin: 0;
+}
+
+.popup-launcher .popup-item:hover {
+    background-color: rgba(75, 75, 75, 1);
+}

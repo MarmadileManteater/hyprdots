@@ -1,0 +1,26 @@
+{
+    "layer": "bottom",
+    "anchor_to_edges": false,
+    "position": "left",
+    "icon_theme": "Win11-dark",
+    "center": [
+      {
+        "type": "launcher",
+        "favorites": [
+          "org.mozilla.firefox",
+          "org.gnome.Nautilus",
+          "kitty",
+          "FreeTube",
+          "discord",
+          "im.riot.Riot",
+          "VSCodium",
+          "org.keepassxc.KeePassXC"
+        ],
+        "show_names": false,
+        "show_icons": true
+      }
+    ],
+    "end": [
+    ]
+  }
+  
