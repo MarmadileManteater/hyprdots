@@ -21,7 +21,6 @@
             "idle_inhibitor",
             "cpu#custom",
             "custom/cpu-temp",
-            "custom/nvidia",
             "custom/power"
         ]
     },
