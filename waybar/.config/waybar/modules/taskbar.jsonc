@@ -60,5 +60,24 @@
     "tray#custom": {
         "icon-size": 21,
         "spacing": 20
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon} {windows}",
+        "on-click": "activate",
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": ""
+        },	"window-rewrite-default": "",
+        "window-rewrite":{
+		    "class<firefox|org.mozilla.firefox|librewolf|floorp|mercury-browser|[Cc]achy-browser>": "󰈹",
+            "title<.*FreeTube.*>": "",
+            "class<discord|[Ww]ebcord|Vesktop>": "",
+            "class<im.riot.Riot>": "󰭹",
+            "class<VSCodium>": "󰨞",
+            "class<org.gnome.Nautilus>": ""
+        },
+        "sort-by-number": true
     }
 }

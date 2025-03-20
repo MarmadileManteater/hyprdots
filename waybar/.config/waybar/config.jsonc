@@ -1,5 +1,6 @@
 [
     {
+        "mode": "dock",
         "include": [
             "$HOME/.config/waybar/modules/stats.jsonc",
             "$HOME/.config/waybar/modules/clock.jsonc",
@@ -39,6 +40,9 @@
             "image",
             "custom/playerctl",
             "custom/cava"
+        ],
+        "modules-center": [
+            "hyprland/workspaces"
         ],
         "modules-right": [
             "tray#custom",
