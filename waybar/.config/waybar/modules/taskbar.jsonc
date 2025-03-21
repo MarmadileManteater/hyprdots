@@ -72,7 +72,7 @@
         },	"window-rewrite-default": "",
         "window-rewrite":{
 		    "class<firefox|org.mozilla.firefox|librewolf|floorp|mercury-browser|[Cc]achy-browser>": "󰈹",
-            "title<.*FreeTube.*>": "",
+            "class<FreeTube>": "",
             "class<discord|[Ww]ebcord|Vesktop>": "",
             "class<im.riot.Riot>": "󰭹",
             "class<VSCodium>": "󰨞",
