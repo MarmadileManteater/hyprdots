@@ -1,9 +1,15 @@
 
 amount=-10
+command="movetoworkspace"
 
 if [ "$1" != "" ]
 then
     amount=$1
+fi
+
+if [ "$2" == "onlychangeworkspace" ]
+then
+    command="workspace"
 fi
 
 active_workspace_id=$(hyprctl -j monitors | jq '.[] | select(.focused==true) | .activeWorkspace | .id')
@@ -13,7 +19,6 @@ if [[ $workspace_id == -* ]]
 then
     echo "Can't decrement"
 else
-    command="movetoworkspace"
     if [[ $(hyprctl workspaces -j | jq ".[] | select(.id==$active_workspace_id) | .windows") == 0 ]]
     then
         command="workspace"
