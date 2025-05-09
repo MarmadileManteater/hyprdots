@@ -76,7 +76,10 @@
             "class<discord|[Ww]ebcord|Vesktop>": "",
             "class<im.riot.Riot>": "󰭹",
             "class<VSCodium>": "󰨞",
-            "class<org.gnome.Nautilus>": ""
+            "class<org.gnome.Nautilus>": "",
+            "title<.*@tutamail.com - Tuta Mail.*>": "",
+            "title<.*Ollama — Mozilla FireFox.*>": "󰚩",
+            "class<org.keepassxc.KeePassXC>": ""
         },
         "sort-by-number": true
     }

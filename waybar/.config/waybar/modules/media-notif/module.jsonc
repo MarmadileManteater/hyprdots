@@ -3,6 +3,15 @@
         "exec": "$HOME/.config/waybar/modules/media-notif/cava.sh",
         "format": "{}"
     },
+    "custom/playerctl#stream": {
+        "exec": "playerctl metadata --format '{{title}}'",
+        "interval": 1,
+        "on-click": "playerctl play",
+        "on-click-middle": "playerctl next",
+        "on-click-right": "playerctl previous",
+        "on-scroll-up": "amixer sset Master 5%+",
+        "on-scroll-down": "amixer sset Master 5%-"
+    },
     "custom/playerctl": {
         "exec": "playerctl metadata --format '{{artist}} - {{title}}'  | awk -v len=50 '{ if (length($0) > len) print substr($0, 1, len-3) \"...\"; else print; }'",
         "interval": 1,
