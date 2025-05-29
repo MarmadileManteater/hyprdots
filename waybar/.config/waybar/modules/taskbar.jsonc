@@ -8,7 +8,9 @@
         "on-click-middle": "close",
         "ignore-list": [
             "kitty",
-            "org.gnome.Ptyxis"
+            "org.gnome.Ptyxis",
+            "org.multimc.MultiMC",
+            "Minecraft* 1.21.1"
         ]
     },
     "battery#custom": {
@@ -79,7 +81,10 @@
             "class<org.gnome.Nautilus>": "",
             "title<.*@tutamail.com - Tuta Mail.*>": "",
             "title<.*Ollama — Mozilla FireFox.*>": "󰚩",
-            "class<org.keepassxc.KeePassXC>": ""
+            "class<org.keepassxc.KeePassXC>": "",
+            "class<jetbrains-studio>": "󰀴",
+            "class<Minecraft.*>": "󰍳",
+            "class<org.pulseaudio.pavucontrol>": "󰓃"
         },
         "sort-by-number": true
     }
