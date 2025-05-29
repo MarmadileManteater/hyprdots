@@ -21,7 +21,7 @@ button {
 }
 
 button:focus, button:active, button:hover {
-	background-color: rgb(80, 80, 80);
+	background-color: /** accent */ #454068   /** /accent */;
 	outline-style: none;
 }
 
