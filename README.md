@@ -16,6 +16,8 @@ These are my dotfiles for hyprland.
 - wlogout
 - hypridle
 - hyprlock
+- magick
+- rofi
 
 **external assets**
 
