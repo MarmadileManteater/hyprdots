@@ -9,7 +9,6 @@
         "ignore-list": [
             "kitty",
             "org.gnome.Ptyxis",
-            "org.multimc.MultiMC",
             "Minecraft* 1.21.1"
         ]
     },

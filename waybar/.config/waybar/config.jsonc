@@ -1,5 +1,7 @@
 [
     {
+        "output": ["DP-1", "DP-2", "DP-3"],
+        "id": "top",
         "mode": "dock",
         "include": [
             "$HOME/.config/waybar/modules/stats.jsonc",
@@ -9,7 +11,7 @@
         ],
         "layer": "bottom",
         "position": "top",
-        "height": 40,
+        "height": 55,
         "modules-left": [
             "wlr/taskbar#custom",
             "hyprland/window"
@@ -24,10 +26,13 @@
             "custom/cpu-temp",
             "custom/nvidia",
             "custom/power"
-        ]
+        ],
+        "reload_style_on_change": true
     },
 
     {
+        "output": ["DP-1", "DP-2", "DP-3"],
+        "id": "bottom",
         "include": [
             "$HOME/.config/waybar/modules/stats.jsonc",
             "$HOME/.config/waybar/modules/taskbar.jsonc",
@@ -50,6 +55,61 @@
             "network#custom",
             "memory#custom",
             "battery#custom"
-        ]
+        ],
+        "reload_style_on_change": true
+    },
+
+    /** TV ONLY (less info because there is less space */
+    {
+        "output": ["HDMI-A-1"],
+        "id": "top",
+        "mode": "dock",
+        "include": [
+            "$HOME/.config/waybar/modules/stats.jsonc",
+            "$HOME/.config/waybar/modules/clock.jsonc",
+            "$HOME/.config/waybar/modules/taskbar.jsonc",
+            "$HOME/.config/waybar/modules/wlogout/modules.jsonc"
+        ],
+        "layer": "bottom",
+        "position": "top",
+        "height": 55,
+        "modules-left": [
+            "wlr/taskbar#custom",
+            "hyprland/window"
+        ],
+        "modules-center": [
+            "clock#date",
+            "clock#time"
+        ],
+        "modules-right": [
+            "idle_inhibitor",
+            "custom/power"
+        ],
+        "reload_style_on_change": true
+    },
+
+    {
+        "output": ["HDMI-A-1"],
+        "id": "bottom",
+        "include": [
+            "$HOME/.config/waybar/modules/stats.jsonc",
+            "$HOME/.config/waybar/modules/taskbar.jsonc",
+            "$HOME/.config/waybar/modules/media-notif/module.jsonc"
+        ],
+        "layer": "bottom",
+        "position": "bottom",
+        "height": 65,
+        "modules-left": [
+            "image",
+            "custom/cava"
+        ],
+        "modules-center": [
+            "hyprland/workspaces"
+        ],
+        "modules-right": [
+            "tray#custom",
+            "pulseaudio#custom"
+        ],
+        "reload_style_on_change": true
     }
 ]
