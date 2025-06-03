@@ -1,7 +1,11 @@
 /home/emma/.config/hypr/scripts/run-in-tmux.sh waybar "waybar"&
 function run_ironbar() {
   sleep 1s
-  /home/emma/.config/hypr/scripts/run-in-tmux.sh ironbar "ironbar"
+  if [[ -f /tmp/ironbar_was_killed.txt ]]
+  then
+    /home/emma/.config/hypr/scripts/run-in-tmux.sh ironbar "ironbar"
+    rm /tmp/ironbar_was_killed.txt
+  fi
 }
 run_ironbar&
 hyprctl dispatch dpms on
