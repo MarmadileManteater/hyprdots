@@ -17,3 +17,7 @@ then
     $HOME/.config/hypr/scripts/run-in-tmux.sh kitty "kitty '$(pwd)'"
     kill $(ps -p $$ -o ppid=)
 fi
+
+function fix-iron-bar-shortcuts() {
+    sudo bash $HOME/.config/hypr/scripts/fix-ironbar-shortcuts.sh org.mozilla.firefox kitty codium freetube
+}
