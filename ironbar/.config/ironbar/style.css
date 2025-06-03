@@ -1,28 +1,34 @@
 
 * {
-    background-image: none;
     background-color: transparent;
 }
 
+.background {
+    background-image: none;
+    border-radius: 0 15px 15px 0;
+    background-color: /** bg */ rgba(0, 0, 0, 0.5) /** /bg */;
+}
+
 #bar {
-    margin-left: 5px;
-    margin-right: 2px;
+    padding: 10px;
+    padding-left: 8px;
 }
 
 .launcher .item {
     opacity: 0.7;
     padding: 6px;
     margin: 5px 0px;
+    border-radius: 0 15px 15px 0;
 }
 
 .launcher .item.open {
-    border: 2px solid rgba(100, 100, 100, 0.58);
-    background-color: rgba(75, 75, 75, 0.58);
+    border: 2px solid rgba(100, 100, 100, 0.78);
+    background-color: rgba(75, 75, 75, 0.68);
 }
 
 .launcher .item.focused {
     opacity: 1;
-    border: 2px solid rgba(150, 150, 150, 0.58);
+    border: 2px solid rgba(150, 150, 150, 0.78);
 }
 
 .popup-launcher .popup-item {
