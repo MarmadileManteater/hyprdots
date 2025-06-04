@@ -18,10 +18,12 @@ button {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 25%;
+	border-radius: 15px;
+	margin: 10px;
 }
 
 button:focus, button:active, button:hover {
-	background-color: /** accent */ #454068   /** /accent */;
+	background-color: /** accent */ #3D4979   /** /accent */;
 	outline-style: none;
 }
 
