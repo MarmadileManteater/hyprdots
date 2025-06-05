@@ -8,6 +8,17 @@
       "icon_theme": "Win11-dark",
       "center": [
         {
+          "bar": [
+            {
+              "on_click": "!~/.config/ironbar/menu.sh",
+              "label": "󰀻",
+              "name": "menu",
+              "type": "button"
+            }
+          ],
+          "type": "custom"
+        },
+        {
           "type": "launcher",
           "favorites": [
             "org.mozilla.firefox",
@@ -32,6 +43,17 @@
       "icon_theme": "Win11-dark",
       "center": [
         {
+          "bar": [
+            {
+              "on_click": "!~/.config/ironbar/menu.sh",
+              "label": "󰀻",
+              "name": "menu",
+              "type": "button"
+            }
+          ],
+          "type": "custom"
+        },
+        {
           "type": "launcher",
           "favorites": [
             "org.mozilla.firefox",
@@ -55,6 +77,17 @@
       "position": "left",
       "icon_theme": "Win11-dark",
       "center": [
+        {
+          "bar": [
+            {
+              "on_click": "!~/.config/ironbar/menu.sh",
+              "label": "󰀻",
+              "name": "menu",
+              "type": "button"
+            }
+          ],
+          "type": "custom"
+        },
         {
           "type": "launcher",
           "favorites": [

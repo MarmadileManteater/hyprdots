@@ -3,6 +3,10 @@
     background-color: transparent;
 }
 
+.custom label {
+	font-size: 30px;
+}
+
 .background {
     background-image: none;
     border-radius: 0 15px 15px 0;
