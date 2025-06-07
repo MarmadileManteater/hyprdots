@@ -7,13 +7,15 @@
             "on-scroll-down": "tz_down"
         },
         "format": "󰥔  {:%r %Z}",
-        "tooltip": false
+        "tooltip": false,
+        "on-click": "gnome-clocks"
     },
 
     "clock#date": {
         "interval": 10,
         "timezones": ["America/Cuiaba"],
         "format": "  {:%e %b %Y}",
-        "tooltip": false
+        "tooltip": false,
+        "on-click": "gnome-calendar"
     }
 }
