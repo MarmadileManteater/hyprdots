@@ -11,4 +11,11 @@
   --sidebar-bg-color: rgba(48,48,48,0.6);
   --sidebar-backdrop-color: rgba(48,48,48,0.6);
   --window-bg-color: rgba(0,0,0,0.75);
+
+  /* accent color set by set-bg */
+  --accent: rgb(61,73,121);
+  --accent-fg: white;
+
+  --accent-bg-color: var(--accent);
+  --accent-fg-color: var(--accent-fg);
 }
