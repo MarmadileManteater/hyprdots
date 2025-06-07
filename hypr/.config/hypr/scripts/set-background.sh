@@ -23,10 +23,6 @@ fi
 if [[ $(( $(( 0xFFFFFF - $hex_color )) -  0xAFFFFF ))  == -* ]]
 then
   waybar_bg="rgba(0, 0, 0, 0.5)"
-fi
-
-if [[ $(( $(( 0xFFFFFF - $hex_color )) -  0x4FFFFF ))  == -* ]]
-then
   accent_fg="black"
 fi
 
