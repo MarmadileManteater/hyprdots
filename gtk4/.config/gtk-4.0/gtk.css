@@ -13,9 +13,32 @@
   --window-bg-color: rgba(0,0,0,0.75);
 
   /* accent color set by set-bg */
-  --accent: rgb(61,73,121);
-  --accent-fg: white;
+  --accent: rgb(135,151,121);
+  --accent-fg: black;
+  --light-accent: lighter( var(--accent) );
 
   --accent-bg-color: var(--accent);
   --accent-fg-color: var(--accent-fg);
+}
+
+/** gnome-calendar tweaks for accent colors */
+.month-name, .week-header .primary-label {
+  color: var(--light-accent);
+}
+
+.undershoot-bottom .today:not(:selected), .sidebar-pane .today:not(:selected) {
+  color: var(--light-accent);
+}
+
+.undershoot-bottom .day:selected, .sidebar-pane .day:selected, .today .day-label {
+  background-color: var(--accent);
+  color: var(--accent-fg);
+}
+
+.now-strip {
+  background-color: var(--accent);
+}
+
+.content-pane :selected, .content-pane .today {
+  background-color: alpha( var(--accent), 0.25 );
 }
