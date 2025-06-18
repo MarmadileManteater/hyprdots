@@ -13,6 +13,7 @@ hex_color="0x$(echo $most_common_hex | grep -o "[^#]*")"
 waybar_bg="rgba(0, 0, 0, 0.25)"
 foreground="#FFFFFF"
 accent_fg="white"
+light_accent="lighter( lighter( lighter( var(--accent) ) ) )"
 
 if [[ $(( $(( 0xFFFFFF - $hex_color )) -  0x8FFFFF ))  == -* ]]
 then
@@ -24,6 +25,7 @@ if [[ $(( $(( 0xFFFFFF - $hex_color )) -  0xAFFFFF ))  == -* ]]
 then
   waybar_bg="rgba(0, 0, 0, 0.5)"
   accent_fg="black"
+  light_accent="lighter( var(--accent) )"
 fi
 
 sed -i "s@/\*\* accent \*/.*/\*\* /accent \*/@/** accent */ $most_common_hex /** /accent */@g" ~/.config/waybar/modules/wlogout/power-menu.css &> /dev/null
@@ -38,3 +40,4 @@ cat ~/.config/ironbar/style.css | sed "s@/\*\* bg \*/.*/\*\* /bg \*/@/** bg */ $
 
 sed -i "s@\-\-accent: .*;@--accent: $most_common_rgb;@g" ~/.config/gtk-4.0/gtk.css
 sed -i "s@\-\-accent-fg: .*;@--accent-fg: $accent_fg;@g" ~/.config/gtk-4.0/gtk.css
+sed -i "s@\-\-light-accent: .*;@--light-accent: $light_accent;@g" ~/.config/gtk-4.0/gtk.css
