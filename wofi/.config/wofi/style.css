@@ -1,0 +1,33 @@
+#window {
+  /* The name of the box that contains everything */
+
+}
+
+#outer−box {
+  padding: 10px;
+  background-color: #1E2127;
+}
+
+#entry {
+  border-radius: 50px;
+  padding: 8px 12px;
+}
+
+#entry:selected {
+  outline: none;
+  color: /** accent-fg */ #FFFFFF /** /accent-fg */;
+  background-color: /** accent */ #4E2232  /** /accent */;
+}
+
+#img {
+  margin-right: 8px;
+}
+
+arrow {
+  background: transparent;
+  outline-color: transparent;
+  border-color: transparent;
+  color: transparent;
+  box-shadow: none;
+  margin-left: -15px;
+}

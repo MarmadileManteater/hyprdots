@@ -9,7 +9,8 @@
         "ignore-list": [
             "kitty",
             "org.gnome.Ptyxis",
-            "Minecraft* 1.21.1"
+            "Minecraft* 1.21.1",
+            "wofi"
         ]
     },
     "battery#custom": {
