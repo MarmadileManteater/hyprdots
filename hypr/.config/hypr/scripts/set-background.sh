@@ -34,6 +34,11 @@ sed -i "s@/\*\* accent \*/.*/\*\* /accent \*/@/** accent */ $most_common_hex /**
 
 sed -i "s@/\*\* accent-fg \*/.*/\*\* /accent-fg \*/@/** accent-fg */ $foreground /** /accent-fg */@g" ~/.config/rofi/themes/style-1-1-launcher.rasi&> /dev/null
 
+sed -i "s@/\*\* accent \*/.*/\*\* /accent \*/@/** accent */ $most_common_hex /** /accent */@g" ~/.config/wofi/style.css&> /dev/null
+
+sed -i "s@/\*\* accent-fg \*/.*/\*\* /accent-fg \*/@/** accent-fg */ $foreground /** /accent-fg */@g" ~/.config/wofi/style.css&> /dev/null
+
+
 sed -i "s@/\*\* bg \*/.*/\*\* /bg \*/@/** bg */ $waybar_bg /** /bg */@g" ~/.config/waybar/style.css &> /dev/null
 
 cat ~/.config/ironbar/style.css | sed "s@/\*\* bg \*/.*/\*\* /bg \*/@/** bg */ $waybar_bg /** /bg */@g" | tee ~/.config/ironbar/style.css &> /dev/null

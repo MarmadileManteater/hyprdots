@@ -17,7 +17,7 @@ These are my dotfiles for hyprland.
 - hypridle
 - hyprlock
 - magick
-- rofi
+- wofi
 
 **external assets**
 

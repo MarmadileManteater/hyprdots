@@ -1,11 +1,15 @@
 #window {
-  /* The name of the box that contains everything */
-
+  background-color: #1E2127;
 }
 
-#outer−box {
-  padding: 10px;
+#input {
   background-color: #1E2127;
+  border: 0;
+}
+
+#input:focus {
+  box-shadow: 0px 0px 0px 1px #1E2127 inset;
+  border: 0;
 }
 
 #entry {
@@ -16,7 +20,20 @@
 #entry:selected {
   outline: none;
   color: /** accent-fg */ #FFFFFF /** /accent-fg */;
-  background-color: /** accent */ #4E2232  /** /accent */;
+  background-color: /** accent */ #454068  /** /accent */;
+}
+
+.overlay-indicator {
+  background-color: transparent;
+  opacity: 1;
+}
+
+.overlay-indicator slider {
+  background-color: /** accent */ #454068  /** /accent */;
+  min-width: 10px;
+  max-width: 10px;
+  outline: none;
+  border: 0;
 }
 
 #img {
@@ -31,3 +48,15 @@ arrow {
   box-shadow: none;
   margin-left: -15px;
 }
+
+#input {
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#outer-box {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+}
+
