@@ -1,111 +1,36 @@
 {
-  "monitors": {
-    "DP-1": {
-      "name": "dock",
-      "layer": "bottom",
-      "anchor_to_edges": false,
-      "position": "left",
-      "icon_theme": "Win11-dark",
-      "center": [
-        {
-          "type": "launcher",
-          "favorites": [
-            "org.mozilla.firefox",
-            "org.gnome.Nautilus",
-            "kitty",
-            "FreeTube",
-            "discord",
-            "im.riot.Riot",
-            "VSCodium",
-            "org.keepassxc.KeePassXC"
-          ],
-          "show_names": false,
-          "show_icons": true
-        },
-        {
-          "bar": [
-            {
-              "on_click": "!~/.config/ironbar/menu.sh",
-              "label": "󰀻",
-              "name": "menu",
-              "type": "button"
-            }
-          ],
-          "type": "custom"
-        }
-      ]
+  "name": "dock",
+  "layer": "bottom",
+  "anchor_to_edges": false,
+  "position": "left",
+  "icon_theme": "Win11-dark",
+  "center": [
+    {
+      "type": "launcher",
+      "favorites": [
+        "org.mozilla.firefox",
+        "org.gnome.Nautilus",
+        "kitty",
+        "FreeTube",
+        "discord",
+        "im.riot.Riot",
+        "VSCodium",
+        "org.keepassxc.KeePassXC"
+      ],
+      "show_names": false,
+      "show_icons": true
     },
-    "DP-2": {
-      "name": "dock",
-      "layer": "bottom",
-      "anchor_to_edges": false,
-      "position": "left",
-      "icon_theme": "Win11-dark",
-      "center": [
+    {
+      "bar": [
         {
-          "type": "launcher",
-          "favorites": [
-            "org.mozilla.firefox",
-            "org.gnome.Nautilus",
-            "kitty",
-            "FreeTube",
-            "discord",
-            "im.riot.Riot",
-            "VSCodium",
-            "org.keepassxc.KeePassXC"
-          ],
-          "show_names": false,
-          "show_icons": true
-        },
-        {
-          "bar": [
-            {
-              "on_click": "!~/.config/ironbar/menu.sh",
-              "label": "󰀻",
-              "name": "menu",
-              "type": "button"
-            }
-          ],
-          "type": "custom"
+          "on_click": "!~/.config/ironbar/menu.sh",
+          "label": "󰀻",
+          "name": "menu",
+          "type": "button"
         }
-      ]
-    },
-    "DP-3": {
-      "name": "dock",
-      "layer": "bottom",
-      "anchor_to_edges": false,
-      "position": "left",
-      "icon_theme": "Win11-dark",
-      "center": [
-        {
-          "type": "launcher",
-          "favorites": [
-            "org.mozilla.firefox",
-            "org.gnome.Nautilus",
-            "kitty",
-            "FreeTube",
-            "discord",
-            "im.riot.Riot",
-            "VSCodium",
-            "org.keepassxc.KeePassXC"
-          ],
-          "show_names": false,
-          "show_icons": true
-        },
-
-        {
-          "bar": [
-            {
-              "on_click": "!~/.config/ironbar/menu.sh",
-              "label": "󰀻",
-              "name": "menu",
-              "type": "button"
-            }
-          ],
-          "type": "custom"
-        }
-      ]
+      ],
+      "type": "custom"
     }
-  }
+  ]
 }
   
