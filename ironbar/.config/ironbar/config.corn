@@ -1,0 +1,64 @@
+let {
+  $layer = "top"
+  $anchor_to_edges = false
+  $position = "left"
+  $icon_theme = "Win11-dark"
+  $favorites = [
+    "org.mozilla.firefox"
+    "org.gnome.Nautilus"
+    "kitty"
+    "FreeTube"
+    "discord"
+    "Element"
+    "VSCodium"
+    "org.keepassxc.KeePassXC"
+    "wofi"
+  ]
+  $custom_start_button = {
+    bar = [
+      {
+        on_click = "!~/.config/ironbar/menu.sh"
+        label = "󰀻"
+        name = "menu"
+        type = "button"
+      }
+    ]
+    type = "custom"
+  }
+  $main = {
+    layer = $layer
+    anchor_to_edges = $anchor_to_edges
+    position = $position
+    icon_theme = $icon_theme
+    center = [
+      {
+        type = "launcher"
+        favorites = $favorites
+        show_names = false
+        show_icons = true
+      }
+      $custom_start_button
+    ]
+  }
+  $tv = {
+    layer = $layer
+    anchor_to_edges = $anchor_to_edges
+    position = $position
+    icon_theme = $icon_theme
+    center = [
+      {
+        type = "launcher"
+        class = "hide-non-favorites"
+        favorites = $favorites
+        show_names = false
+        show_icons = true
+      }
+      $custom_start_button
+    ]
+  }
+} in {
+  monitors.DP-1 = $main
+  monitors.DP-2 = $main
+  monitors.DP-3 = $main
+  monitors.HDMI-A-1 = $tv
+}
