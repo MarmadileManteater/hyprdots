@@ -1,6 +1,6 @@
 {
   "name": "dock",
-  "layer": "bottom",
+  "layer": "top",
   "anchor_to_edges": false,
   "position": "left",
   "icon_theme": "Win11-dark",

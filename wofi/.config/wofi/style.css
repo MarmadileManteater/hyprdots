@@ -60,3 +60,7 @@ arrow {
   border: none;
 }
 
+#inner-box {
+  padding-right: 25px;
+}
+
