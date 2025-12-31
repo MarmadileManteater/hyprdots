@@ -9,13 +9,23 @@ alias set-bg="$HOME/.config/hypr/scripts/set-background.sh"
 
 PATH="/mnt/personal/workspace/scripts-toolbox/linux/:$PATH"
 
+USING_GNOME=0
+
+if [ "$(fastfetch | grep "DE: GNOME")" != "" ]
+then
+    USING_GNOME=1
+fi
+
 if [[ "$(ps -p $(ps -p $$ -o ppid=) -o args=)" == *"ptyxis"* ]]
 then
-    # hacky, but it does work
-    tmux kill-session -tkitty
-    # opens kitty instead of ptyxis
-    $HOME/.config/hypr/scripts/run-in-tmux.sh kitty "kitty '$(pwd)'"
-    kill $(ps -p $$ -o ppid=)
+    if [[ "$USING_GNOME" == "0" ]]
+    then
+        # hacky, but it does work
+        tmux kill-session -tkitty
+        # opens kitty instead of ptyxis
+        $HOME/.config/hypr/scripts/run-in-tmux.sh kitty "kitty '$(pwd)'"
+        kill $(ps -p $$ -o ppid=)
+    fi
 fi
 
 function fix-iron-bar-shortcuts() {
