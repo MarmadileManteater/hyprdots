@@ -8,7 +8,6 @@ tmux new-session -d -s $session_name "/bin/bash"
 
 tmux send-keys -t$session_name "$command" Enter
 
-
 if [[ "$flags" == "-"* ]]
 then
     if [[ "$flags" == *"a"* ]]
