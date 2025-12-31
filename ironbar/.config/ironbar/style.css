@@ -57,3 +57,8 @@
 .popup-launcher .popup-item:hover {
     background-color: rgba(75, 75, 75, 1);
 }
+
+#menu {
+    background-image: none;
+    border: 0;
+}
