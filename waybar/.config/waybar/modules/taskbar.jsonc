@@ -48,7 +48,8 @@
             "default": ["", "  "]
         },
         "on-click": "amixer set Master toggle",
-        "on-click-middle": "pavucontrol"
+        // kill current instance (if exists, and respawn to move window to current workspace)
+        "on-click-middle": "(killall pavucontrol || echo '') && pavucontrol"
     },
 
     "idle_inhibitor": {
