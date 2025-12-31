@@ -1,4 +1,11 @@
 
+CALLING_FROM_NAUTILUS=0
+
+if [[ $(echo "$@" | grep "\--nautilus") != "" ]];
+then
+  CALLING_FROM_NAUTILUS=1
+fi
+
 file=$1
 
 cp "$1" $HOME/.config/hypr/background
@@ -46,3 +53,32 @@ cat ~/.config/ironbar/style.css | sed "s@/\*\* bg \*/.*/\*\* /bg \*/@/** bg */ $
 sed -i "s@\-\-accent: .*;@--accent: $most_common_rgb;@g" ~/.config/gtk-4.0/gtk.css
 sed -i "s@\-\-accent-fg: .*;@--accent-fg: $accent_fg;@g" ~/.config/gtk-4.0/gtk.css
 sed -i "s@\-\-light-accent: .*;@--light-accent: $light_accent;@g" ~/.config/gtk-4.0/gtk.css
+
+kill $(pidof gnome-calendar)
+kill $(pidof gnome-clocks)
+
+# kill nautilus if there a no windows
+$HOME/.config/hypr/scripts/kill-background-nautilus.sh
+
+# restart nautilus if the call is coming from inside the house
+if [ "$CALLING_FROM_NAUTILUS" == "1" ];
+then
+  number_of_windows=$($HOME/.config/hypr/scripts/get-number-of-windows.sh org.gnome.Nautilus)
+
+  # don't restart nautilus if there is more than 1 window open
+  # only 1 window will be reopened, so if I call 
+  # this with more than 1 window open accidentally,
+  # I would rather not lose my place.
+  if [[ $number_of_windows -lt 2 ]]
+  then
+    nautilus_id=$(pidof nautilus)
+    
+    if [ "$nautilus_id" != "" ];
+    then
+    dirname="$(dirname "$1")"
+    kill $nautilus_id
+    nautilus "$dirname"&
+    fi
+  fi
+fi
+
