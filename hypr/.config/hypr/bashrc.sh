@@ -6,6 +6,7 @@ export FORCE_WAYLAND_CHROME_ARGS="--enable-features=UseOzonePlatform --ozone-pla
 # since i'm always launching it like this
 alias wfreetube="freetube $FORCE_WAYLAND_CHROME_ARGS"
 alias set-bg="$HOME/.config/hypr/scripts/set-background.sh"
+alias set-accent="$HOME/.config/hypr/scripts/set-accent-color.sh"
 
 PATH="/mnt/personal/workspace/scripts-toolbox/linux/:$PATH"
 
