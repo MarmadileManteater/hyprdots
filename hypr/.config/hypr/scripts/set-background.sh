@@ -14,7 +14,12 @@ swww img $HOME/.config/hypr/background
 
 most_common_color=$(magick $HOME/.config/hypr/background -colors 1 -unique-colors txt: | tail -n1)
 most_common_hex=$(echo $most_common_color | grep -o '#\(.*\) ')
-most_common_rgb="rgb$(echo $most_common_color | grep -o '(\(.*\)) '  | tr -d '[:space:]')"
+# remove alpha channel
+if [[ "${#most_common_hex}" -eq 10 ]]
+then
+  most_common_hex="${most_common_hex:0:-3}"
+fi
+most_common_rgb="rgb$(echo $most_common_color | grep -o '([0-9]*,[0-9]*,[0-9]*'))"
 hex_color="0x$(echo $most_common_hex | grep -o "[^#]*")"
 
 waybar_bg="rgba(0, 0, 0, 0.25)"
