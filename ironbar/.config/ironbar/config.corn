@@ -9,10 +9,11 @@ let {
     "kitty"
     "FreeTube"
     "discord"
-    "Element"
+    "im.riot.Riot"
     "VSCodium"
     "org.keepassxc.KeePassXC"
     "wofi"
+    "org.gnome.Ptyxis"
   ]
   $custom_start_button = {
     bar = [
