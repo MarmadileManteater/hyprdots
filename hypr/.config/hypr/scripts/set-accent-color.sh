@@ -50,27 +50,6 @@ then
   hex_param="#$hex_param"
 fi
 
-# get the hex color as a hex number
-hex_color="0x$(echo $hex_param | grep -o "[^#]*")"
-
-waybar_bg="rgba(0, 0, 0, 0.25)"
-foreground="#FFFFFF"
-accent_fg="white"
-light_accent="lighter( lighter( lighter( var(--accent) ) ) )"
-
-if [[ $(( $(( 0xFFFFFF - $hex_color )) -  0x8FFFFF ))  == -* ]]
-then
-  foreground="#000000"
-
-fi
-
-if [[ $(( $(( 0xFFFFFF - $hex_color )) -  0xAFFFFF ))  == -* ]]
-then
-  waybar_bg="rgba(0, 0, 0, 0.5)"
-  accent_fg="black"
-  light_accent="lighter( var(--accent) )"
-fi
-
 sed -i "s@/\*\* accent \*/.*/\*\* /accent \*/@/** accent */ $hex_param /** /accent */@g" ~/.config/waybar/modules/wlogout/power-menu.css &> /dev/null
 
 sed -i "s@/\*\* accent \*/.*/\*\* /accent \*/@/** accent */ $hex_param /** /accent */@g" ~/.config/rofi/themes/style-1-1-launcher.rasi&> /dev/null
@@ -80,11 +59,6 @@ sed -i "s@/\*\* accent-fg \*/.*/\*\* /accent-fg \*/@/** accent-fg */ $foreground
 sed -i "s@/\*\* accent \*/.*/\*\* /accent \*/@/** accent */ $hex_param /** /accent */@g" ~/.config/wofi/style.css&> /dev/null
 
 sed -i "s@/\*\* accent-fg \*/.*/\*\* /accent-fg \*/@/** accent-fg */ $foreground /** /accent-fg */@g" ~/.config/wofi/style.css&> /dev/null
-
-
-sed -i "s@/\*\* bg \*/.*/\*\* /bg \*/@/** bg */ $waybar_bg /** /bg */@g" ~/.config/waybar/style.css &> /dev/null
-
-cat ~/.config/ironbar/style.css | sed "s@/\*\* bg \*/.*/\*\* /bg \*/@/** bg */ $waybar_bg /** /bg */@g" | tee ~/.config/ironbar/style.css &> /dev/null
 
 sed -i "s@\-\-accent: .*;@--accent: $rgb_param;@g" ~/.config/gtk-4.0/gtk.css &> /dev/null
 sed -i "s@\-\-accent-fg: .*;@--accent-fg: $accent_fg;@g" ~/.config/gtk-4.0/gtk.css &> /dev/null
@@ -111,7 +85,7 @@ then
     
     if [ "$nautilus_id" != "" ];
     then
-    dirname="$(dirname "$1")"
+    dirname="$(pwd)"
     kill $nautilus_id
     nautilus "$dirname"&
     fi
