@@ -7,48 +7,46 @@ then
   CALLING_FROM_NAUTILUS=1
 fi
 
-which_param=""
+# allow rgb or hex input
+IFS=$'\n'
+colors=($($HOME/.config/hypr/scripts/normalize-color-input.sh $@ --which))
 
-rgb_param=$(echo "$@" | grep "\--rgb=.*[\)|\) ]" -o | xargs)
-hex_param=$(echo "$@" | grep "\--hex=[0-9A-F]* *" -o | xargs)
-
-if [ "$rgb_param" != "" ]
+if [ ${colors[0]:0:1} != "r" ]
 then
-  rgb_param="${rgb_param:6:-1})"
-  rgb_param="rgb$(echo $rgb_param | grep -o '([0-9]*, *[0-9]*, *[0-9]*'))"
-fi
-
-if [ "$hex_param" != "" ]
-then
-  hex_param="${hex_param:6:6}"
-  if [ "${#hex_param}" -lt 6 ]
-  then
-    if [ "$rgb_param" == "" ]
-    then
-      echo "Hex not long enough"
-    fi
-    # invalid input
-    hex_param=""
-  fi
-fi
-
-if [ "$rgb_param" != "" ]
-then
-  which_param="rgb"
-  hex_param=$(~/.config/hypr/scripts/rgb-to-hex.sh "$rgb_param")
-elif [ "$hex_param" != "" ]
-then
-  which_param="hex"
-  rgb_param=$(~/.config/hypr/scripts/hex-to-rgb.sh "$hex_param")
-else
-  echo "No valid parameters given"
+  for output in "${colors[@]}"
+  do
+    echo "$output"
+  done
   exit
 fi
+
+rgb_param=${colors[0]}
+hex_param=${colors[1]}
+which_param=${colors[2]}
+
+# get the hex color as a hex number
+hex_color="0x$(echo $hex_param | grep -o "[^#]*")"
 
 if [ "${hex_param:0:1}" != "#" ]
 then
   hex_param="#$hex_param"
 fi
+
+foreground="#FFFFFF"
+accent_fg="white"
+light_accent="lighter( lighter( lighter( var(--accent) ) ) )"
+
+if [[ $(( $(( 0xFFFFFF - $hex_color )) -  0x8FFFFF ))  == -* ]]
+then
+  foreground="#000000"
+fi
+
+if [[ $(( $(( 0xFFFFFF - $hex_color )) -  0xAFFFFF ))  == -* ]]
+then
+  accent_fg="black"
+  light_accent="lighter( var(--accent) )"
+fi
+
 
 sed -i "s@/\*\* accent \*/.*/\*\* /accent \*/@/** accent */ $hex_param /** /accent */@g" ~/.config/waybar/modules/wlogout/power-menu.css &> /dev/null
 
@@ -104,4 +102,4 @@ then
   vocal_param="$rgb_param"
 fi
 
-echo "Set accent to $vocal_param"
+echo "Set accent to $(echo $vocal_param | $HOME/.config/hypr/scripts/print-as-color.sh --hex=${hex_param:1:6})"

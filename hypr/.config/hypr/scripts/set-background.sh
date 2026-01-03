@@ -19,20 +19,10 @@ most_common_hex=$(echo $most_common_color | grep -o '#\(.*\) ')
 hex_color="0x$(echo $most_common_hex | grep -o "[^#]*")"
 
 waybar_bg="rgba(0, 0, 0, 0.25)"
-foreground="#FFFFFF"
-accent_fg="white"
-light_accent="lighter( lighter( lighter( var(--accent) ) ) )"
-
-if [[ $(( $(( 0xFFFFFF - $hex_color )) -  0x8FFFFF ))  == -* ]]
-then
-  foreground="#000000"
-fi
 
 if [[ $(( $(( 0xFFFFFF - $hex_color )) -  0xAFFFFF ))  == -* ]]
 then
   waybar_bg="rgba(0, 0, 0, 0.5)"
-  accent_fg="black"
-  light_accent="lighter( var(--accent) )"
 fi
 
 # set the ironbar and waybar colors based on if the wallpaper is lighter or darker
