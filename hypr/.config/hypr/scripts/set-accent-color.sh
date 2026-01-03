@@ -102,4 +102,4 @@ then
   vocal_param="$rgb_param"
 fi
 
-echo "Set accent to $(echo $vocal_param | $HOME/.config/hypr/scripts/print-as-color.sh --hex=${hex_param:1:6})"
+echo "Set accent to $(echo " $vocal_param" | $HOME/.config/hypr/scripts/print-as-color.sh --hex=${hex_param:1:6})"
