@@ -43,12 +43,16 @@ done
 
 read selection
 
+len=$(echo "${#colors} + 2" | bc)
 if [ $selection -gt 0 ]
 then
-  if [ $selection -lt ${#colors} ]
+  if [ $selection -lt $len ]
   then
     index=$(echo "$selection - 1" | bc)
     chosen_color=${colors[$index]}
     $HOME/.config/hypr/scripts/set-accent-color.sh --hex=${chosen_color:1:6}
+    exit
   fi
 fi
+
+echo "Invalid selection"
