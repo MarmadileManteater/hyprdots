@@ -64,3 +64,7 @@
     background-image: none;
     border: 0;
 }
+
+.launcher .item:active {
+    opacity: 1;
+}
