@@ -1,5 +1,16 @@
 #/bin/bash
 
+SHORT_HELP="prints stdin in selected color"
+HELP_ARGS="parameters: (only needs 1 color parameter)\n - --hex= - color in hex format\n - --rgb= - color in RGB format"
+
+help_result=$($HOME/.config/hypr/scripts/is_help.sh "$SHORT_HELP" "$HELP_ARGS" $@)
+
+if [ "$help_result" != "" ]
+then
+  echo "$help_result"
+  exit
+fi
+
 # allow rgb or hex input
 IFS=$'\n'
 colors=($($HOME/.config/hypr/scripts/normalize-color-input.sh $@))

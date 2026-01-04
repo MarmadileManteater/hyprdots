@@ -1,5 +1,16 @@
 #/bin/bash
 
+SHORT_HELP="provides options for the accent based on the wallpaper"
+HELP_ARGS="parameters:\n - number (optional) - number of color choices to generate (DEFAULT 5)"
+
+help_result=$($HOME/.config/hypr/scripts/is_help.sh "$SHORT_HELP" "$HELP_ARGS" $@)
+
+if [ "$help_result" != "" ]
+then
+  echo "$help_result"
+  exit
+fi
+
 NUM_OF_COLORS=5
 
 if [ "$1" != "" ]

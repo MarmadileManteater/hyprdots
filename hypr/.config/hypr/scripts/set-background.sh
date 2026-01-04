@@ -1,3 +1,15 @@
+#!/bin/bash
+
+SHORT_HELP="sets wallpaper"
+HELP_ARGS="parameters:\n - path to wallpaper\n - --nautilus flag (optional) - restarts nautilus if exactly one instance instance is open"
+
+help_result=$($HOME/.config/hypr/scripts/is_help.sh "$SHORT_HELP" "$HELP_ARGS" $@)
+
+if [ "$help_result" != "" ]
+then
+  echo "$help_result"
+  exit
+fi
 
 CALLING_FROM_NAUTILUS=0
 

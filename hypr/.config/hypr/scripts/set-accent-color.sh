@@ -1,5 +1,16 @@
 #/bin/bash
 
+SHORT_HELP="sets accent color"
+HELP_ARGS="parameters: (only needs 1 color parameter)\n - --hex= - color in hex format\n - --rgb= - color in RGB format\n - --nautilus flag (optional) - restarts nautilus if exactly one instance instance is open"
+
+help_result=$($HOME/.config/hypr/scripts/is_help.sh "$SHORT_HELP" "$HELP_ARGS" $@)
+
+if [ "$help_result" != "" ]
+then
+  echo "$help_result"
+  exit
+fi
+
 CALLING_FROM_NAUTILUS=0
 
 if [[ $(echo "$@" | grep "\--nautilus") != "" ]];

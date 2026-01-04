@@ -11,6 +11,8 @@ alias accent-options="$HOME/.config/hypr/scripts/change-accent-from-wallpaper.sh
 alias get-accent="$HOME/.config/hypr/scripts/get-accent-color.sh"
 alias printc="$HOME/.config/hypr/scripts/print-as-color.sh"
 alias logout="$HOME/.config/hypr/scripts/logout.sh"
+alias help="$HOME/.config/hypr/scripts/help.sh"
+alias fix-iron-bar-shortcuts="$HOME/.config/hypr/scripts/fix-ironbar-shortcuts.sh org.mozilla.firefox kitty codium freetube"
 
 PATH="/mnt/personal/workspace/scripts-toolbox/linux/:$PATH"
 
@@ -32,7 +34,3 @@ then
         kill $(ps -p $$ -o ppid=)
     fi
 fi
-
-function fix-iron-bar-shortcuts() {
-    sudo bash $HOME/.config/hypr/scripts/fix-ironbar-shortcuts.sh org.mozilla.firefox kitty codium freetube
-}
