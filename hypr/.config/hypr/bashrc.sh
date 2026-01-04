@@ -9,6 +9,8 @@ alias set-bg="$HOME/.config/hypr/scripts/set-background.sh"
 alias set-accent="$HOME/.config/hypr/scripts/set-accent-color.sh"
 alias accent-options="$HOME/.config/hypr/scripts/change-accent-from-wallpaper.sh"
 alias get-accent="$HOME/.config/hypr/scripts/get-accent-color.sh"
+alias printc="$HOME/.config/hypr/scripts/print-as-color.sh"
+alias logout="$HOME/.config/hypr/scripts/logout.sh"
 
 PATH="/mnt/personal/workspace/scripts-toolbox/linux/:$PATH"
 
