@@ -8,6 +8,7 @@ alias wfreetube="freetube $FORCE_WAYLAND_CHROME_ARGS"
 alias set-bg="$HOME/.config/hypr/scripts/set-background.sh"
 alias set-accent="$HOME/.config/hypr/scripts/set-accent-color.sh"
 alias accent-options="$HOME/.config/hypr/scripts/change-accent-from-wallpaper.sh"
+alias get-accent="$HOME/.config/hypr/scripts/get-accent-color.sh"
 
 PATH="/mnt/personal/workspace/scripts-toolbox/linux/:$PATH"
 
