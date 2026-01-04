@@ -18,6 +18,8 @@ These are my dotfiles for hyprland.
 - hyprlock
 - magick
 - wofi
+- bc
+- fastfetch
 
 **external assets**
 

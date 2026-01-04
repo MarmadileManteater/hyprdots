@@ -62,6 +62,8 @@ sed -i "s@\-\-accent: .*;@--accent: $rgb_param;@g" ~/.config/gtk-4.0/gtk.css &> 
 sed -i "s@\-\-accent-fg: .*;@--accent-fg: $accent_fg;@g" ~/.config/gtk-4.0/gtk.css &> /dev/null
 sed -i "s@\-\-light-accent: .*;@--light-accent: $light_accent;@g" ~/.config/gtk-4.0/gtk.css &> /dev/null
 
+sed -i "s@\"color\": \".*\"@\"color\": \"$hex_param\"@g" ~/.config/fastfetch/config.jsonc &> /dev/null
+
 kill $(pidof gnome-calendar) &> /dev/null
 kill $(pidof gnome-clocks) &> /dev/null
 
