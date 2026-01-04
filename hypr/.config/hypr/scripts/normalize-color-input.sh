@@ -41,7 +41,7 @@ then
   which_param="hex"
   rgb_param=$(~/.config/hypr/scripts/hex-to-rgb.sh "$hex_param")
 else
-  echo "No valid parameters given"
+  echo "No valid color parameters given"
   exit
 fi
 
