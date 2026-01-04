@@ -47,9 +47,21 @@ foreground="#FFFFFF"
 accent_fg="white"
 light_accent="lighter( lighter( lighter( var(--accent) ) ) )"
 
+alt1=$($HOME/.config/hypr/scripts/modulate-color.sh --hex=${hex_param:1} --brightness=50)
+
+alt2=$($HOME/.config/hypr/scripts/modulate-color.sh --hex=${hex_param:1} --brightness=100)
+
+alt_fg="#000000"
+
+success="$hex_param"
+error="$($HOME/.config/hypr/scripts/modulate-color.sh --hex=${hex_param:1} --invert)"
+
 if [[ $(( $(( 0xFFFFFF - $hex_color )) -  0x8FFFFF ))  == -* ]]
 then
   foreground="#000000"
+  alt1=$($HOME/.config/hypr/scripts/modulate-color.sh --hex=${hex_param:1} --brightness=-50)
+  alt2=$($HOME/.config/hypr/scripts/modulate-color.sh --hex=${hex_param:1} --brightness=-100)
+  alt_fg="#FFFFFF"
 fi
 
 if [[ $(( $(( 0xFFFFFF - $hex_color )) -  0xAFFFFF ))  == -* ]]
@@ -74,6 +86,22 @@ sed -i "s@\-\-accent-fg: .*;@--accent-fg: $accent_fg;@g" ~/.config/gtk-4.0/gtk.c
 sed -i "s@\-\-light-accent: .*;@--light-accent: $light_accent;@g" ~/.config/gtk-4.0/gtk.css &> /dev/null
 
 sed -i "s@\"color\": \".*\"@\"color\": \"$hex_param\"@g" ~/.config/fastfetch/config.jsonc &> /dev/null
+
+sed -i "s@red = \".*\"#primary@red = \"$hex_param\"#primary@g" ~/.config/starship.toml
+
+sed -i "s@redfg = \".*\"#primaryfg@redfg = \"$foreground\"#primaryfg@g" ~/.config/starship.toml
+
+sed -i "s@green = \".*\"#secondary@green = \"$alt1\"#secondary@g" ~/.config/starship.toml
+
+sed -i "s@greenfg = \".*\"#secondaryfg@greenfg = \"$alt_fg\"#secondaryfg@g" ~/.config/starship.toml
+
+sed -i "s@blue = \".*\"#tertiary@blue = \"$alt2\"#tertiary@g" ~/.config/starship.toml
+
+sed -i "s@bluefg = \".*\"#tertiaryfg@bluefg = \"$alt_fg\"#tertiaryfg@g" ~/.config/starship.toml
+
+sed -i "s@success = \".*\"#success@success = \"$success\"#success@g" ~/.config/starship.toml
+
+sed -i "s@error = \".*\"#error@error = \"$error\"#error@g" ~/.config/starship.toml
 
 kill $(pidof gnome-calendar) &> /dev/null
 kill $(pidof gnome-clocks) &> /dev/null
