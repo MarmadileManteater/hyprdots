@@ -51,6 +51,8 @@ alt1=$($HOME/.config/hypr/scripts/modulate-color.sh --hex=${hex_param:1} --brigh
 
 alt2=$($HOME/.config/hypr/scripts/modulate-color.sh --hex=${hex_param:1} --brightness=100)
 
+fastfetch=$alt2
+
 alt_fg="#000000"
 
 success="$hex_param"
@@ -58,6 +60,7 @@ error="$($HOME/.config/hypr/scripts/modulate-color.sh --hex=${hex_param:1} --inv
 
 if [[ $(( $(( 0xFFFFFF - $hex_color )) -  0x8FFFFF ))  == -* ]]
 then
+  fastfetch=$hex_param
   foreground="#000000"
   alt1=$($HOME/.config/hypr/scripts/modulate-color.sh --hex=${hex_param:1} --brightness=-50)
   alt2=$($HOME/.config/hypr/scripts/modulate-color.sh --hex=${hex_param:1} --brightness=-100)
@@ -85,7 +88,7 @@ sed -i "s@\-\-accent: .*;@--accent: $rgb_param;@g" ~/.config/gtk-4.0/gtk.css &> 
 sed -i "s@\-\-accent-fg: .*;@--accent-fg: $accent_fg;@g" ~/.config/gtk-4.0/gtk.css &> /dev/null
 sed -i "s@\-\-light-accent: .*;@--light-accent: $light_accent;@g" ~/.config/gtk-4.0/gtk.css &> /dev/null
 
-sed -i "s@\"color\": \".*\"@\"color\": \"$hex_param\"@g" ~/.config/fastfetch/config.jsonc &> /dev/null
+sed -i "s@\"color\": \".*\"@\"color\": \"$fastfetch\"@g" ~/.config/fastfetch/config.jsonc &> /dev/null
 
 sed -i "s@red = \".*\"#primary@red = \"$hex_param\"#primary@g" ~/.config/starship.toml
 
