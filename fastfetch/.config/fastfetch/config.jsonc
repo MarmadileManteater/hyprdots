@@ -9,7 +9,7 @@
     "width": 20,           // Width in characters
     "height": 10,          // Height in characters
     "padding": {
-        "top": 1,          // Top padding
+        "top": 2,          // Top padding
         "left": 2,         // Left padding
         "right": 2         // Right padding
     },
@@ -19,6 +19,7 @@
     }
   },
   "modules": [
+    "break",
     "os",
     "kernel",
     "uptime",
