@@ -37,7 +37,7 @@
         "scroll-step": 1,
         "format": "{icon}  {volume}%",
         "format-bluetooth": "{icon}  {volume}%",
-        "format-muted": "󰝟 ",
+        "format-muted": "󰝟      {volume}%",
         "format-icons": {
             "headphone": " ",
             "handsfree": "",
@@ -45,7 +45,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "  "]
+            "default": ["  ", "  "]
         },
         "on-click": "amixer set Master toggle",
         // kill current instance (if exists, and respawn to move window to current workspace)
