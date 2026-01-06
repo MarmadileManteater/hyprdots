@@ -22,7 +22,19 @@ fi
 for i in $(seq 0 $end)
 do
   k=$(echo "$i * 2" | bc)
-  rgb_color="$rgb_color$(echo "ibase=16; ${hex_param:$k:2}" | bc)"
+  this_param="${hex_param:$k:2}"
+  if [ $end -eq 3 ]
+  then
+    if [ $i -eq $end ]
+    then
+      this_param=$(echo "scale=2;$(echo "ibase=16; ${hex_param:$k:2}" | bc).0 / 255" | bc)
+      rgb_color="$rgb_color$this_param"
+    fi
+  fi
+  if [ "$(echo $this_param | grep -o '\.')" == "" ]
+  then
+    rgb_color="$rgb_color$(echo "ibase=16; $this_param" | bc)"
+  fi
   if [ $i != $end ]
   then
     rgb_color="$rgb_color, "
