@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function print_accent () {
-  echo $@ | $HOME/.config/hypr/scripts/print-as-color.sh --hex=$($HOME/.config/hypr/scripts/get-accent-color.sh --no-hash)
+  echo $@ | $HOME/.config/hypr/scripts/print-as-color.sh --hex=$($HOME/.config/hypr/scripts/get-accent-color.sh --no-hash --fg)
 }
 
 echo "Commands:"
