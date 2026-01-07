@@ -5,12 +5,15 @@ kill $(pidof tmux)
 
 # wallpaper
 $HOME/.config/hypr/scripts/run-in-tmux.sh swww "swww-daemon"&
-# notifications
-$HOME/.config/hypr/scripts/run-in-tmux.sh swaync "swaync"&
+if [ "$bar" != "hyprpanel" ]
+then
+  # notifications
+  $HOME/.config/hypr/scripts/run-in-tmux.sh swaync "swaync"&
+fi
 # polkit
 $HOME/.config/hypr/scripts/run-in-tmux.sh xfce-polkit "/usr/libexec/xfce-polkit"&
 # taskbar
-$HOME/.config/hypr/scripts/run-in-tmux.sh waybar "sleep 4 && waybar"&
+$HOME/.config/hypr/scripts/run-in-tmux.sh waybar "sleep 4 && $bar"&
 # dock
 $HOME/.config/hypr/scripts/run-in-tmux.sh ironbar "sleep 8 && ironbar"&
 # idle

@@ -1,9 +1,9 @@
 
-if [ "$(pidof waybar)" != "" ];
+if [ "$(tmux list-sessions | grep 'waybar' -o)" != "" ];
 then
   tmux kill-session -twaybar
 else
- $HOME/.config/hypr/scripts/run-in-tmux.sh waybar "waybar"&
+ $HOME/.config/hypr/scripts/run-in-tmux.sh waybar "$bar"&
 fi
 
 

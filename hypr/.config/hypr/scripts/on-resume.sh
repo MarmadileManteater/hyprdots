@@ -1,4 +1,4 @@
-/home/emma/.config/hypr/scripts/run-in-tmux.sh waybar "waybar"&
+/home/emma/.config/hypr/scripts/run-in-tmux.sh waybar "$bar"&
 function run_ironbar() {
   sleep 1s
   if [[ -f /tmp/ironbar_was_killed.txt ]]
