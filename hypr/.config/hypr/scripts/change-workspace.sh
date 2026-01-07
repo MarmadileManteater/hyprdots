@@ -30,7 +30,7 @@ then
         monitor=$(hyprctl -j monitors | jq '.[] | select(.focused==true) | .id')
         target_workspace=$(hyprctl workspaces -j | jq ".[] | select(.monitorID == $monitor) | .id" | tail -1)
         amount="$target_workspace"
-        workspace_id="$target_workspace"S
+        workspace_id="$target_workspace"
     fi
 
     exists=$(hyprctl workspaces -j | jq ".[] | select(.id == $workspace_id) | .id")
