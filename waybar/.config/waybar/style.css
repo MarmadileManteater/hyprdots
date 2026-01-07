@@ -107,3 +107,7 @@
   transition: none;
   border-radius: 0;
 }
+
+#custom-notification-center {
+  margin-right: 5px;
+}

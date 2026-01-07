@@ -90,6 +90,7 @@ sed -i "s@\-\-light-accent: .*;@--light-accent: $light_accent;@g" ~/.config/gtk-
 
 sed -i "s@\"color\": \".*\"@\"color\": \"$fastfetch\"@g" ~/.config/fastfetch/config.jsonc &> /dev/null
 
+
 sed -i "s@red = \".*\"#primary@red = \"$hex_param\"#primary@g" ~/.config/starship.toml
 
 sed -i "s@redfg = \".*\"#primaryfg@redfg = \"$foreground\"#primaryfg@g" ~/.config/starship.toml
@@ -106,6 +107,9 @@ sed -i "s@success = \".*\"#success@success = \"$success\"#success@g" ~/.config/s
 
 sed -i "s@error = \".*\"#error@error = \"$error\"#error@g" ~/.config/starship.toml
 
+sed -i "s@/\*\* accent \*/ .* /\*\* /accent \*/;@/\*\* accent \*/ $hex_param /\*\* /accent \*/;@g" ~/.config/swaync/style.css &> /dev/null
+
+swaync-client --reload-css
 kill $(pidof gnome-calendar) &> /dev/null
 kill $(pidof gnome-clocks) &> /dev/null
 

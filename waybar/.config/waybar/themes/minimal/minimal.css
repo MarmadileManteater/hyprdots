@@ -28,7 +28,8 @@
 #custom-window-or-music-title,
 #clock,
 #idle_inhibitor,
-#custom-power
+#custom-power,
+#custom-notification-center
 {
   font-size: 18px;
   font-weight: bold;
@@ -42,4 +43,8 @@
 
 #custom-window-or-music-title {
   margin-left: 5px;
+}
+
+#custom-notification-center {
+  margin-right: 10px;
 }

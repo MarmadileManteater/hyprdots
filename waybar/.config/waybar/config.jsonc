@@ -17,6 +17,7 @@
             "hyprland/window"
         ],
         "modules-center": [
+            "custom/notification-center",
             "clock#date",
             "clock#time"
         ],

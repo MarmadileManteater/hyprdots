@@ -90,5 +90,28 @@
             "class<org.pulseaudio.pavucontrol>": "󰓃"
         },
         "sort-by-number": true
+    },
+
+    // pulled from https://www.mankier.com/1/swaync
+    // (and modified slightly)
+    "custom/notification-center": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "<sup></sup>",
+            "none": "<sup>  </sup>",
+            "dnd-notification": "󰂛<sup></sup>",
+            "dnd-none": "󰂛<sup>  </sup>",
+            "inhibited-notification": "<sup></sup>",
+            "inhibited-none": "<sup>  </sup>",
+            "dnd-inhibited-notification": "󰂛<sup></sup>",
+            "dnd-inhibited-none": "󰂛<sup>  </sup>"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
     }
 }

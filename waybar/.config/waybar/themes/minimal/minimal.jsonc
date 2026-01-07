@@ -22,6 +22,7 @@
             "custom/window-or-music-title"
         ],
         "modules-center": [
+            "custom/notification-center",
             "clock#date",
             "clock#time"
         ],
