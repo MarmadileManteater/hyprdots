@@ -23,7 +23,7 @@ button {
 }
 
 button:focus, button:active, button:hover {
-	background-color: /** accent */ #3D4979   /** /accent */;
+	background-color: /** accent */ #224499 /** /accent */;
 	outline-style: none;
 }
 

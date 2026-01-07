@@ -1,7 +1,7 @@
 {
     "clock#time": {
         "interval": 1,
-        "timezones": ["America/Cuiaba", "CET"],
+        "timezones": ["EST", "CET"],
         "actions":{
             "on-scroll-up": "tz_up",
             "on-scroll-down": "tz_down"
@@ -13,7 +13,7 @@
 
     "clock#date": {
         "interval": 10,
-        "timezones": ["America/Cuiaba"],
+        "timezones": ["EST"],
         "format": "  {:%e %b %Y}",
         "tooltip": false,
         "on-click": "gnome-calendar"

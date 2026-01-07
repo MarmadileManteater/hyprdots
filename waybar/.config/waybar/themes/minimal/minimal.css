@@ -1,0 +1,45 @@
+
+@import url('../../style.css');
+
+#waybar.top {
+  border-radius: 0;
+}
+
+#workspaces.minimal {
+  letter-spacing: -8px;
+  margin-right: 0px;
+}
+
+#workspaces.minimal button {
+  text-shadow: none;
+  margin: 0;
+  margin-right: -20px;
+  border: 0;
+}
+
+#workspaces.minimal button.empty {
+  padding-right: 18px;
+}
+
+#workspaces.minimal button:hover {
+  border: transparent;
+}
+
+#custom-window-or-music-title,
+#clock,
+#idle_inhibitor,
+#custom-power
+{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#image image {
+  margin-top: 6px;
+  margin-left: 0px;
+  margin-right: 12px;
+}
+
+#custom-window-or-music-title {
+  margin-left: 5px;
+}

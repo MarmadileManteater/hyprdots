@@ -1,0 +1,22 @@
+[
+  {
+    "class": "org.mozilla.firefox",
+    "icon": "",
+    "title": "Firefox"
+  },
+  {
+    "class": "im.riot.Riot",
+    "icon": "󰭹",
+    "title": "Element"
+  },
+  {
+    "class": "org.keepassxc.KeePassXC",
+    "icon": "",
+    "title": "KeePassXC"
+  },
+  {
+    "class": "org.gnome.Nautilus",
+    "icon": "",
+    "title": "Files"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "custom/window-or-music-title": {
+    "exec": "$HOME/.config/hypr/scripts/get-media-or-window-title.sh 30",
+    "interval": 1,
+    "on-click": "playerctl play",
+    "on-click-middle": "playerctl next",
+    "on-click-right": "playerctl previous",
+    "on-scroll-up": "amixer sset Master 5%+",
+    "on-scroll-down": "amixer sset Master 5%-"
+  }
+}

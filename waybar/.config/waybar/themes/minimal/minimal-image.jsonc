@@ -1,0 +1,13 @@
+{
+  "image#minimal": {
+      "exec":"$HOME/.config/waybar/modules/media-notif/album_art.sh",
+      "size": 55,
+      "interval": 1,
+      "on-click": "playerctl play",
+      "on-click-middle": "playerctl next",
+      "on-click-right": "playerctl previous",
+      "on-scroll-up": "amixer sset Master 5%+",
+      "on-scroll-down": "amixer sset Master 5%-",
+      "expand": true
+  }
+}

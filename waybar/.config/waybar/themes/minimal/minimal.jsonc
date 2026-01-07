@@ -1,0 +1,36 @@
+[
+    {
+        "id": "top",
+        "mode": "dock",
+        "include": [
+            "$HOME/.config/waybar/modules/stats.jsonc",
+            "$HOME/.config/waybar/modules/clock.jsonc",
+            "$HOME/.config/waybar/modules/taskbar.jsonc",
+            "$HOME/.config/waybar/modules/wlogout/modules.jsonc",
+            "$HOME/.config/waybar/modules/window-or-music-title.jsonc",
+            "$HOME/.config/waybar/themes/minimal/minimal-workspaces.jsonc",
+            "$HOME/.config/waybar/themes/minimal/minimal-tray.jsonc",
+            "$HOME/.config/waybar/modules/media-notif/module.jsonc",
+            "$HOME/.config/waybar/themes/minimal/minimal-image.jsonc"
+        ],
+        "layer": "bottom",
+        "position": "top",
+        "height": 40,
+        "modules-left": [
+            "hyprland/workspaces#minimal",
+            "image#minimal",
+            "custom/window-or-music-title"
+        ],
+        "modules-center": [
+            "clock#date",
+            "clock#time"
+        ],
+        "modules-right": [
+            "idle_inhibitor",
+            "tray#minimal",
+            "pulseaudio#custom",
+            "custom/power"
+        ],
+        "reload_style_on_change": true
+    }
+]
