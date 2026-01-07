@@ -17,7 +17,7 @@
   padding: 8px 12px;
 }
 
-#entry:selected {
+#entry:selected, #entry:selected * {
   outline: none;
   color: /** accent-fg */ #FFFFFF /** /accent-fg */;
   background-color: /** accent */ #454068  /** /accent */;
