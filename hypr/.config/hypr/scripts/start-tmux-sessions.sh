@@ -13,19 +13,25 @@ fi
 # polkit
 $HOME/.config/hypr/scripts/run-in-tmux.sh xfce-polkit "/usr/libexec/xfce-polkit"&
 # taskbar
-$HOME/.config/hypr/scripts/run-in-tmux.sh waybar "sleep 4 && $bar"&
+$HOME/.config/hypr/scripts/run-in-tmux.sh waybar "$bar"&
 # dock
-$HOME/.config/hypr/scripts/run-in-tmux.sh ironbar "sleep 8 && ironbar"&
+$HOME/.config/hypr/scripts/run-in-tmux.sh ironbar "ironbar"&
 # idle
 $HOME/.config/hypr/scripts/run-in-tmux.sh hypridle "sleep 4 && hypridle"&
 # launch pia
-$HOME/.config/hypr/scripts/run-in-tmux.sh privateinternetaccess "sleep 4 && /opt/piavpn/bin/pia-client --quiet"&
+$HOME/.config/hypr/scripts/run-in-tmux.sh privateinternetaccess "/opt/piavpn/bin/pia-client --quiet"&
 
-# launch discord, element, tutamail
-$HOME/.config/hypr/scripts/run-in-tmux.sh discord "flatpak run com.discordapp.Discord" && sleep 4 && $HOME/.config/hypr/scripts/run-in-tmux.sh element "flatpak run im.riot.Riot" && sleep 4 && hyprctl dispatch workspace 3 && hyprctl dispatch workspace 13 && $HOME/.config/hypr/scripts/run-in-tmux.sh tutamail "firefox --new-window https://app.tuta.com/" && sleep 3s && hyprctl dispatch workspace 3
+# launch discord
+$HOME/.config/hypr/scripts/run-in-tmux.sh discord "flatpak run com.discordapp.Discord"
+
+# launch element
+$HOME/.config/hypr/scripts/run-in-tmux.sh element "flatpak run im.riot.Riot"
+
+# launch firefox
+hyprctl dispatch exec [workspace 13] firefox "https://app.tuta.com/"
 
 # launch openrgb
-$HOME/.config/hypr/scripts/run-in-tmux.sh openrgb "sleep 8 && openrgb --startminimized"
+$HOME/.config/hypr/scripts/run-in-tmux.sh openrgb "sleep 1 && openrgb --startminimized"
 
 # these two should be system level, but they never seem to launch consistently with systemd
 # launch ollama-web-ui
