@@ -4,6 +4,10 @@ viewport {
   margin-right: 70px;
 }
 
+#control-center-window viewport {
+  margin-right: 0;
+}
+
 .notification {
   box-shadow: none;
 }
