@@ -13,10 +13,10 @@ fi
 
 
 
-hex=$(cat $HOME/.config/hypr/accent.txt)
+hex=$(cat $HOME/.config/hypr/data/accent.txt)
 if [ "$(echo "$@" | grep '\--fg' -o)" != "" ]
 then
-  hex=$(cat $HOME/.config/hypr/fg-accent.txt)
+  hex=$(cat $HOME/.config/hypr/data/fg-accent.txt)
 fi
 
 if [ "$(echo "$@" | grep '\--no-hash' -o)" != "" ]

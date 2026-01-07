@@ -1,4 +1,9 @@
 
+
+viewport {
+  margin-right: 70px;
+}
+
 .notification {
   box-shadow: none;
 }

@@ -3,5 +3,7 @@
   "positionX": "center",
   "control-center-margin-top": 5,
   "control-center-margin-bottom": 200,
-  "control-center-margin-right": 80
+  "control-center-margin-right": 80,
+  "control-center-width": 560,
+  "notification-window-width": 560
 }

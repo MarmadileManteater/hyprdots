@@ -5,7 +5,7 @@
     "on-click": "playerctl play",
     "on-click-middle": "playerctl next",
     "on-click-right": "playerctl previous",
-    "on-scroll-up": "amixer sset Master 5%+",
-    "on-scroll-down": "amixer sset Master 5%-"
+    "on-scroll-up": "$HOME/.config/hypr/scripts/change-volume.sh up",
+    "on-scroll-down": "$HOME/.config/hypr/scripts/change-volume.sh down"
   }
 }

@@ -9,8 +9,8 @@
         "on-click": "playerctl play",
         "on-click-middle": "playerctl next",
         "on-click-right": "playerctl previous",
-        "on-scroll-up": "amixer sset Master 5%+",
-        "on-scroll-down": "amixer sset Master 5%-"
+        "on-scroll-up": "$HOME/.config/hypr/scripts/change-volume.sh up",
+        "on-scroll-down": "$HOME/.config/hypr/scripts/change-volume.sh down"
     },
     "custom/playerctl": {
         "exec": "playerctl metadata --format '{{artist}} - {{title}}'  | awk -v len=50 '{ if (length($0) > len) print substr($0, 1, len-3) \"...\"; else print; }'",
@@ -18,8 +18,8 @@
         "on-click": "playerctl play",
         "on-click-middle": "playerctl next",
         "on-click-right": "playerctl previous",
-        "on-scroll-up": "amixer sset Master 5%+",
-        "on-scroll-down": "amixer sset Master 5%-"
+        "on-scroll-up": "$HOME/.config/hypr/scripts/change-volume.sh up",
+        "on-scroll-down": "$HOME/.config/hypr/scripts/change-volume.sh down"
     },
     "image": {
         "exec":"$HOME/.config/waybar/modules/media-notif/album_art.sh",
@@ -28,7 +28,7 @@
         "on-click": "playerctl play",
         "on-click-middle": "playerctl next",
         "on-click-right": "playerctl previous",
-        "on-scroll-up": "amixer sset Master 5%+",
-        "on-scroll-down": "amixer sset Master 5%-"
+        "on-scroll-up": "$HOME/.config/hypr/scripts/change-volume.sh up",
+        "on-scroll-down": "$HOME/.config/hypr/scripts/change-volume.sh down"
     }
 }

@@ -1,3 +1,2 @@
 hypr/.config/hypr/background
-hypr/.config/hypr/accent.txt
-hypr/.config/hypr/fg-accent.txt
+hypr/.config/hypr/data/*.txt
