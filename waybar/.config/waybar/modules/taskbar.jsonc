@@ -48,9 +48,8 @@
             "car": "",
             "default": ["  ", "  "]
         },
-        "on-click": "amixer set Master toggle",
-        // kill current instance (if exists, and respawn to move window to current workspace)
-        "on-click-middle": "(killall pavucontrol || echo '') && pavucontrol",
+        "on-click": "$HOME/.config/hypr/scripts/toggle-volume-control.sh",
+        "on-click-middle": "amixer set Master toggle",
         "on-scroll-up": "$HOME/.config/hypr/scripts/change-volume.sh up 3",
         "on-scroll-down": "$HOME/.config/hypr/scripts/change-volume.sh down 3"
     },

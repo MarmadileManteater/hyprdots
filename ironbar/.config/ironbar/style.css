@@ -10,7 +10,7 @@
 .background {
     background-image: none;
     border-radius: 0 15px 15px 0;
-    background-color: /** bg */ rgba(0, 0, 0, 0.25) /** /bg */;
+    background-color: /** bg */ rgba(0, 0, 0, 0.5) /** /bg */;
 }
 
 #bar {
