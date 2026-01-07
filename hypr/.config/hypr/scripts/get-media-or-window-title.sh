@@ -9,4 +9,4 @@ else
   output=$music
 fi
 
-echo "${output:0:1}    ${output:2}"
+echo "${output:0:1}    $(echo "${output:2}" | sed 's@&@&amp;@g')"
