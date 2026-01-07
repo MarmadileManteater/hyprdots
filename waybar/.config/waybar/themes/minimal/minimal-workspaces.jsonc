@@ -9,6 +9,8 @@
         },	"window-rewrite-default": "",
         "window-rewrite":{
         },
-        "sort-by-number": true
+        "sort-by-number": true,
+        "on-scroll-up": "$HOME/.config/hypr/scripts/change-workspace.sh +10 onlychangeworkspace wrap",
+        "on-scroll-down": "$HOME/.config/hypr/scripts/change-workspace.sh -10 onlychangeworkspace wrap"
     }
 }
