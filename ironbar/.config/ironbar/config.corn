@@ -1,4 +1,5 @@
 let {
+  $name = "ironbar"
   $layer = "top"
   $anchor_to_edges = false
   $position = "left"
@@ -27,6 +28,55 @@ let {
     type = "custom"
   }
   $main = {
+    name = $name
+    layer = $layer
+    anchor_to_edges = $anchor_to_edges
+    position = $position
+    icon_theme = $icon_theme
+    center = [
+      {
+        type = "launcher"
+        favorites = $favorites
+        show_names = false
+        show_icons = true
+      }
+      $custom_start_button
+    ]
+  }
+  $dp1 = {
+    name = "$name-1"
+    layer = $layer
+    anchor_to_edges = $anchor_to_edges
+    position = $position
+    icon_theme = $icon_theme
+    center = [
+      {
+        type = "launcher"
+        favorites = $favorites
+        show_names = false
+        show_icons = true
+      }
+      $custom_start_button
+    ]
+  }
+  $dp2 = {
+    name = "$name-2"
+    layer = $layer
+    anchor_to_edges = $anchor_to_edges
+    position = $position
+    icon_theme = $icon_theme
+    center = [
+      {
+        type = "launcher"
+        favorites = $favorites
+        show_names = false
+        show_icons = true
+      }
+      $custom_start_button
+    ]
+  }
+  $dp3 = {
+    name = "$name-3"
     layer = $layer
     anchor_to_edges = $anchor_to_edges
     position = $position
@@ -42,6 +92,7 @@ let {
     ]
   }
   $tv = {
+    name = "$name-4"
     layer = $layer
     anchor_to_edges = $anchor_to_edges
     position = $position
@@ -58,8 +109,8 @@ let {
     ]
   }
 } in {
-  monitors.DP-1 = $main
-  monitors.DP-2 = $main
-  monitors.DP-3 = $main
+  monitors.DP-1 = $dp1
+  monitors.DP-2 = $dp2
+  monitors.DP-3 = $dp3
   monitors.HDMI-A-1 = $tv
 }
