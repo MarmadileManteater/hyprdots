@@ -1,6 +1,6 @@
 let {
   $name = "ironbar"
-  $layer = "top"
+  $layer = "bottom"
   $anchor_to_edges = false
   $position = "left"
   $icon_theme = "Win11-dark"

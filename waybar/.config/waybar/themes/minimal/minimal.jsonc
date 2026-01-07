@@ -1,7 +1,6 @@
 [
     {
         "id": "top",
-        "mode": "dock",
         "include": [
             "$HOME/.config/waybar/modules/stats.jsonc",
             "$HOME/.config/waybar/modules/clock.jsonc",
