@@ -1,0 +1,30 @@
+
+.notification {
+  box-shadow: none;
+}
+
+.notification-content {
+  padding: 15px;
+}
+
+.notification-default-action {
+  background-color: #2c2c2c;
+}
+
+.notification-default-action:hover {
+  background-color: #2f2f2f;
+}
+
+.notification-group,
+.notification-group-collapse-button {
+  outline: none;
+}
+
+.control-center-dnd:checked {
+  background-color: /** accent */ #224499 /** /accent */;
+}
+
+#control-center-window .control-center {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
