@@ -1,0 +1,15 @@
+{
+  "custom/idle-inhibitor": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "inactive": "󰾫"
+        },
+        "return-type": "json",
+        "exec-if": "which hypridle",
+        "exec": "$HOME/.config/waybar/modules/idle-inhibitor/get-status.sh",
+        "on-click": "$HOME/.config/waybar/modules/idle-inhibitor/toggle.sh",
+        "escape": true
+    }
+}

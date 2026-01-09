@@ -29,7 +29,8 @@
 #clock,
 #idle_inhibitor,
 #custom-power,
-#custom-notification-center
+#custom-notification-center,
+#custom-idle-inhibitor
 {
   font-size: 18px;
   font-weight: bold;
@@ -37,7 +38,7 @@
 
 #image image {
   margin-top: 6px;
-  margin-left: 0px;
+  margin-left: 3px;
   margin-right: 12px;
 }
 

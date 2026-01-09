@@ -10,7 +10,8 @@
             "$HOME/.config/waybar/themes/minimal/minimal-workspaces.jsonc",
             "$HOME/.config/waybar/themes/minimal/minimal-tray.jsonc",
             "$HOME/.config/waybar/modules/media-notif/module.jsonc",
-            "$HOME/.config/waybar/themes/minimal/minimal-image.jsonc"
+            "$HOME/.config/waybar/themes/minimal/minimal-image.jsonc",
+            "$HOME/.config/waybar/modules/idle-inhibitor/module.jsonc"
         ],
         "layer": "bottom",
         "position": "top",
@@ -26,7 +27,7 @@
             "clock#time"
         ],
         "modules-right": [
-            "idle_inhibitor",
+            "custom/idle-inhibitor",
             "tray#minimal",
             "pulseaudio#custom",
             "custom/power"

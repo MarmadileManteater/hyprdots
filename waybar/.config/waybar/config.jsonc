@@ -7,7 +7,8 @@
             "$HOME/.config/waybar/modules/stats.jsonc",
             "$HOME/.config/waybar/modules/clock.jsonc",
             "$HOME/.config/waybar/modules/taskbar.jsonc",
-            "$HOME/.config/waybar/modules/wlogout/modules.jsonc"
+            "$HOME/.config/waybar/modules/wlogout/modules.jsonc",
+            "$HOME/.config/waybar/modules/idle-inhibitor/module.jsonc"
         ],
         "layer": "bottom",
         "position": "top",
@@ -22,7 +23,7 @@
             "clock#time"
         ],
         "modules-right": [
-            "idle_inhibitor",
+            "custom/idle-inhibitor",
             "cpu#custom",
             "custom/cpu-temp",
             "custom/nvidia",
