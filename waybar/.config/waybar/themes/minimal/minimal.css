@@ -30,10 +30,16 @@
 #idle_inhibitor,
 #custom-power,
 #custom-notification-center,
-#custom-idle-inhibitor
+#custom-idle-inhibitor,
+#pulseaudio
 {
   font-size: 18px;
   font-weight: bold;
+}
+
+#pulseaudio {
+  margin-top: -1px;
+  margin-right: 5px;
 }
 
 #image image {
