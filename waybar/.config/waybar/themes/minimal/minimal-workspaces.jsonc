@@ -1,12 +1,13 @@
 {
     "hyprland/workspaces#minimal": {
-        "format": "{icon} {windows}",
+        "format": "{icon}",
         "on-click": "activate",
         "format-icons": {
             "urgent": "",
             "active": "",
             "default": ""
-        },	"window-rewrite-default": "",
+        },	
+        "window-rewrite-default": "",
         "window-rewrite":{
         },
         "sort-by-number": true,
