@@ -2,24 +2,34 @@
 
 length=$1
 
+icon=""
+
 artist=$(playerctl metadata --format '{{artist}}')
 track=$(playerctl metadata --format '{{title}}')
+status=$(playerctl status)
+if [ "$status" == "Playing" ]
+then
+  icon=""
+else
+  icon=""
+fi
+
 if [ "$artist" != "" ]
 then
   if [ "$track" != "" ]
   then
-    data="󰝚 $artist - $track"
+    data="$icon $artist - $track"
     # if the artist name is inserted into the track by the software, discard it
     if [ "$(echo "$track" | grep "\- $artist" -o )" != "" ]
     then
-      data="󰝚 $track"
+      data="$icon $track"
     fi
   else
-    data="󰝚 $artist"
+    data="$icon $artist"
   fi
 elif [ "$track" != "" ]
 then
-  data="󰝚 $track"
+  data="$icon $track"
 fi
 
 if [ "$length" != "" ]

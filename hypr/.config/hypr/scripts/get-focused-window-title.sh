@@ -9,7 +9,7 @@ title="$(echo $result | jq '.title')"
 
 if [ "$result" != "" ]
 then
-  echo "${icon:1:-1} ${title:1:-1}"
+  echo "${icon:1:-1}  ${title:1:-1}"
 else
-  echo "󰣆 ${class_name:1:-1}"
+  echo "󰣆  ${class_name:1:-1}"
 fi
