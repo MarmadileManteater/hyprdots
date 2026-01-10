@@ -10,6 +10,7 @@ viewport {
 
 .notification {
   box-shadow: none;
+  font-family: '0xProtoNerdFont';
 }
 
 .notification-content {
