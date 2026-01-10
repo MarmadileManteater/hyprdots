@@ -55,6 +55,6 @@ then
   arg="--replace-id $id"
 fi
 
-id=$(notify-send "$icon   Volume - $percent%" "\n$bar" $arg --expire-time=1000 --print-id)
+id=$(notify-send "$icon Volume - $percent%" "\n$bar" $arg --expire-time=1000 --print-id)
 
 echo $id > $HOME/.config/hypr/data/volume-notification-id.txt
