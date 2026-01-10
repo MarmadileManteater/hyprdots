@@ -1,13 +1,33 @@
 [
   {
+    "class": "kitty",
+    "icon": "󰄛",
+    "title": "Kitty Terminal"
+  },
+  {
     "class": "org.mozilla.firefox",
-    "icon": "",
+    "icon": "󰈹",
     "title": "Firefox"
+  },
+  {
+    "class": "FreeTube",
+    "icon": "",
+    "title": "FreeTube"
+  },
+  {
+    "class": "codium",
+    "icon": "󰨞",
+    "title": "VSCodium"
   },
   {
     "class": "im.riot.Riot",
     "icon": "󰭹",
     "title": "Element"
+  },
+  {
+    "class": "discord",
+    "icon": "",
+    "title": "Discord"
   },
   {
     "class": "org.keepassxc.KeePassXC",
@@ -18,5 +38,35 @@
     "class": "org.gnome.Nautilus",
     "icon": "",
     "title": "Files"
+  },
+  {
+    "class": "org.gnome.SystemMonitor",
+    "icon": "󰨇",
+    "title": "Task Manager"
+  },
+  {
+    "class": "org.gnome.Calculator",
+    "icon": "󰪚",
+    "title": "Calculator"
+  },
+  {
+    "class": "wofi",
+    "icon": "󱗼",
+    "title": "Wofi"
+  },
+  {
+    "class": "com.obsproject.Studio",
+    "icon": "",
+    "title": "OBS Studio"
+  },
+  {
+    "class": "steam",
+    "icon": "",
+    "title": "Steam"
+  },
+  {
+    "class": "FTL.amd64",
+    "icon": "󱓞",
+    "title": "FTL: Faster Than Light"
   }
 ]
