@@ -13,6 +13,7 @@ alias printc="$HOME/.config/hypr/scripts/print-as-color.sh"
 alias logout="$HOME/.config/hypr/scripts/logout.sh"
 alias help="$HOME/.config/hypr/scripts/help.sh"
 alias fix-iron-bar-shortcuts="$HOME/.config/hypr/scripts/fix-ironbar-shortcuts.sh org.mozilla.firefox kitty codium freetube"
+alias set-ironbar-theme="$HOME/.config/hypr/scripts/set-ironbar-theme.sh"
 
 PATH="/mnt/personal/workspace/scripts-toolbox/linux/:$PATH"
 

@@ -13,3 +13,4 @@ echo "  $(print_accent "accent-options") - $($HOME/.config/hypr/scripts/change-a
 echo "  $(print_accent "printc") - $($HOME/.config/hypr/scripts/print-as-color.sh --help-short)"
 echo "  $(print_accent "logout") - $($HOME/.config/hypr/scripts/logout.sh --help-short)"
 echo "  $(print_accent "fix-iron-bar-shortcuts") - $($HOME/.config/hypr/scripts/fix-ironbar-shortcuts.sh --help-short)"
+echo "  $(print_accent "set-ironbar-theme") - $($HOME/.config/hypr/scripts/set-ironbar-theme.sh --help-short)"

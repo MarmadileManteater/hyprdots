@@ -1,0 +1,80 @@
+let {
+  $name = "ironbar"
+  $layer = "bottom"
+  $anchor_to_edges = true
+  $position = "left"
+  $icon_theme = "Win11-dark"
+  $favorites = [
+    "org.mozilla.firefox"
+    "org.gnome.Nautilus"
+    "kitty"
+    "FreeTube"
+    "discord"
+    "im.riot.Riot"
+    "codium"
+    "org.keepassxc.KeePassXC"
+    "wofi"
+    "org.gnome.Ptyxis"
+  ]
+  $custom_start_button = {
+    bar = [
+      {
+        on_click = "!~/.config/ironbar/menu.sh"
+        label = "󰀻"
+        name = "menu"
+        type = "button"
+      }
+    ]
+    type = "custom"
+  }
+  $launcher = {
+    type = "launcher"
+    favorites = $favorites
+    show_names = false
+    show_icons = true
+  }
+  $main = {
+    layer = $layer
+    anchor_to_edges = $anchor_to_edges
+    position = $position
+    icon_theme = $icon_theme
+    start = [
+      $custom_start_button
+      $launcher
+    ]
+  }
+  $hide_non_favorites = {
+    layer = $layer
+    anchor_to_edges = $anchor_to_edges
+    position = $position
+    icon_theme = $icon_theme
+    start = [
+      $custom_start_button
+      {
+        ..$launcher
+        class = "hide-non-favorites"
+      }
+    ]
+  }
+  $dp1 = {
+    name = "$name-1"
+    ..$main
+  }
+  $dp2 = {
+    name = "$name-2"
+    ..$main
+  }
+  $dp3 = {
+    name = "$name-3"
+    ..$main
+  }
+  $tv = {
+    name = "$name-4"
+    ..$hide_non_favorites
+  }
+} in {
+  monitors.DP-1 = $dp1
+  monitors.DP-2 = $dp2
+  monitors.DP-3 = $dp3
+  monitors.HDMI-A-1 = $tv
+}
