@@ -1,0 +1,73 @@
+
+
+@import url('./themes/default/style.css');
+
+* {
+    background-color: transparent;
+}
+
+.custom label {
+	font-size: 30px;
+}
+
+.background {
+    background-image: none;
+    border-radius: 15px 15px 0 0;
+    background-color: /** bg */ rgba(0, 0, 0, 0.5) /** /bg */;
+}
+
+#bar {
+    padding: 10px;
+    padding-left: 8px;
+} 
+
+.launcher .item {
+    opacity: 0.7;
+    padding: 6px;
+    margin: 0px 5px;
+    border-radius: 15px 15px 0 0;
+}
+
+.hide-non-favorites .item, 
+.launcher .item.favorite:nth-child(9),
+.launcher .item.favorite:nth-child(10) {
+    /** hide non-favorites */
+    opacity: 0;
+    margin-right: -80px;
+} 
+
+.launcher .item.favorite {
+    opacity: 0.7;
+    padding: 6px;
+    margin: 0px 5px;
+    border-radius: 15px 15px 0 0;
+}
+
+.launcher .item.open {
+    border: 2px solid rgba(100, 100, 100, 0.78);
+    background-color: rgba(75, 75, 75, 0.68);
+}
+
+.launcher .item.focused {
+    opacity: 1;
+    border: 2px solid rgba(150, 150, 150, 0.78);
+}
+
+.popup-launcher .popup-item {
+    background-color: rgba(50, 50, 50, 1);
+    border: 2px solid rgba(75, 75, 75, 1);
+    margin: 0;
+}
+
+.popup-launcher .popup-item:hover {
+    background-color: rgba(75, 75, 75, 1);
+}
+
+#menu {
+    background-image: none;
+    border: 0;
+}
+
+.launcher .item:active {
+    opacity: 1;
+}
