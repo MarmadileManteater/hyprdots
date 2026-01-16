@@ -47,14 +47,18 @@
   margin-right: 5px;
 }
 
+#image {
+  margin-left: 0px;
+}
+
 #image image {
-  margin-top: 6px;
-  margin-left: -4px;
-  margin-right: 12px;
+  margin-top: 5px;
+  margin-left: 0px;
+  margin-right: 14px;
 }
 
 #custom-window-or-music-title {
-  margin-left: 5px;
+  margin-left: 3px;
 }
 
 #custom-notification-center {
